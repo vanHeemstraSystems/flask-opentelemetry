@@ -6,7 +6,7 @@ télémétrie à ouverture de flacon
 
 [Références](./REFERENCES.md)
 
-**Executive Summary**
+**Résumé exécutif**
 
 Texte
 
