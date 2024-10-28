@@ -8,7 +8,7 @@ kolf-opentelemetrie
 
 **Samenvatting**
 
-Na[installatie](./300/100/README.md), run it with:
+Na[installatie](./300/100/README.md), voer het uit met:
 
     $ cd flask_opentelemetry/src/example
     $ flask run
@@ -21,7 +21,7 @@ Stop de server (CTRL+C) en voer in dezelfde terminal uit:
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Gevolgd door het starten van de applicatie via de agent (zie referentie) en het bijhouden van een tekstlogbestand:
+Gevolgd door het starten van de applicatie via de agent (zie[referentie](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) en houd een tekstlogbestand bij:
 
     opentelemetry-instrument \
       --traces_exporter console \
@@ -201,7 +201,7 @@ U kunt elke URL uit het tekstlogbestand grep:
 
     $ cat output.log | grep http.host
 
-Je zult een uitvoer zien zoals:
+You will see an output like:
 
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
