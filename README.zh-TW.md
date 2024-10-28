@@ -6,21 +6,21 @@
 
 [參考](./REFERENCES.md)
 
-**執行摘要**
+**Executive Summary**
 
-後[installation](./300/100/README.md)，運行它：
+後[安裝](./300/100/README.md)，運行它：
 
 更多的
 
-## 100 - 簡介
+## 100 - Introduction
 
-看[README.md](./100/README.md)
+See [README.md](./100/README.md)
 
 ## 200 - 要求
 
 看[README.md](./200/README.md)
 
-## 300 - Building Our Application
+## 300 - 建立我們的應用程式
 
 看[README.md](./300/README.md)
 
