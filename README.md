@@ -24,7 +24,7 @@ Stop the server (CTRL+C) and in the same terminal run:
 $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 ```
 
-Followed by:
+Followed by starting the application via the agent (see reference) and keep a text log file:
 
 ```
 opentelemetry-instrument \
@@ -32,7 +32,7 @@ opentelemetry-instrument \
   --metrics_exporter console \
   --logs_exporter console \
   --service_name todo \
-  flask run -p 5000
+  flask run -p 5000 | tee output.log
 ```
 
 Alternatively, you can use environment variables to configure the agent:
@@ -41,10 +41,11 @@ Alternatively, you can use environment variables to configure the agent:
 OTEL_SERVICE_NAME=todo \
 OTEL_TRACES_EXPORTER=console \
 OTEL_METRICS_EXPORTER=console \
-OTEL_LOG_EXPORTER=console
-OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
+OTEL_LOG_EXPORTER=console \
+OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317 \
+OTEL_EXPORTER_OTLP_INSECURE=true \
 opentelemetry-instrument \
-    flask run -p 5000
+    flask run -p 5000 | tee output.log
 ```
 
 Open a web browser at http://localhost:5000
@@ -52,6 +53,32 @@ Open a web browser at http://localhost:5000
 You will see the same ```To-Do List``` app. You can add or delete tasks.
 
 But on port 4317, the OpenTelemetry server is listening.
+
+The collector runs on port 4317, so any other error message than a timeout/connection error (e.g. ```Transient error StatusCode.UNAVAILABLE encountered while exporting traces to localhost:4317, retrying in 2s.```), means that the application is running:
+
+```
+$ curl localhost:4317
+curl: (1) Received HTTP/0.9 when not allowed
+```
+
+If the collector is not running you get:
+
+```
+$ curl localhost:4317
+curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
+```
+
+With this setup, in addition to the open telemetry collector, we also get [Jaeger UI](https://github.com/jaegertracing/jaeger-ui) running under http://0.0.0.0:16686/ which will help in visualizing the calls.
+
+You can grep any urls from the text logfile:
+
+```
+$ cat output.log | grep http.url
+```
+
+The collected telemetry is helpful to understand the amount and latency of the requests over time. Let’s filter in Jaeger UI (http://0.0.0.0:16686/) for one of the URLs using the tag ``` url goes here ```.
+
+
 
 ## 100 - Introduction
 

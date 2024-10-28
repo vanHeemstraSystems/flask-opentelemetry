@@ -3,5 +3,5 @@ flask_sqlalchemy
 sqlalchemy.orm
 opentelemetry-instrumentation-flask
 opentelemetry-instrumentation-requests
-opentelemetry-distro 
 opentelemetry-exporter-otlp
+opentelemetry-distro
