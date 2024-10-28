@@ -188,20 +188,20 @@ Le collecteur OpenTelemetry (OTel) s'exécute sur le port 4317, donc tout autre 
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
 
-Si le collecteur ne fonctionne pas, vous obtenez :
+Si OTel Collector ne fonctionne pas, vous obtenez :
 
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Avec cette configuration, en plus du collecteur de télémétrie ouvert, nous obtenons également[Interface utilisateur Jaeger](https://github.com/jaegertracing/jaeger-ui)courir sous<http://0.0.0.0:16686/>ce qui aidera à visualiser les appels. Les interfaces utilisateur alternatives prises en charge sont`Prometheus`et`ZipKin`.
+Avec cette configuration, en plus du collecteur OTel, nous obtenons également[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)courir sous<http://0.0.0.0:16686/>ce qui aidera à visualiser les appels. Les interfaces utilisateur alternatives prises en charge sont`Prometheus`et`ZipKin`.
 
-Le client et le serveur envoient des données directement au collecteur OTel ; Le collecteur OTel envoie ensuite les données au backend approprié, dans cette démo Jaeger.
+Le client et le serveur envoient des données directement au collecteur OTel ; Le collecteur OTel envoie ensuite les données au backend approprié, dans cette démo`Jaeger`.
 
 Vous pouvez récupérer n'importe quelle URL du fichier journal texte :
 
     $ cat output.log | grep http.host
 
-Vous verrez une sortie comme :
+You will see an output like:
 
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
@@ -218,7 +218,7 @@ PLUS
 
 Voir[README.md](./100/README.md)
 
-## 200 - Requirements
+## 200 - Exigences
 
 Voir[README.md](./200/README.md)
 
