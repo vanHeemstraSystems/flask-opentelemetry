@@ -193,7 +193,7 @@ Si le collecteur ne fonctionne pas, vous obtenez :
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Avec cette configuration, en plus du collecteur de télémétrie ouvert, nous obtenons également[Interface utilisateur Jaeger](https://github.com/jaegertracing/jaeger-ui)courir sous<http://0.0.0.0:16686/>ce qui aidera à visualiser les appels.
+Avec cette configuration, en plus du collecteur de télémétrie ouvert, nous obtenons également[Interface utilisateur Jaeger](https://github.com/jaegertracing/jaeger-ui)courir sous<http://0.0.0.0:16686/>ce qui aidera à visualiser les appels. Les interfaces utilisateur alternatives prises en charge sont`Prometheus`et`ZipKin`.
 
 Le client et le serveur envoient des données directement au collecteur OTel ; Le collecteur OTel envoie ensuite les données au backend approprié, dans cette démo Jaeger.
 
@@ -214,15 +214,15 @@ Filtrons dans l'interface utilisateur de Jaeger (<http://0.0.0.0:16686/>) pour l
 
 PLUS
 
-## 100 - Introduction
+## 100 - Présentation
 
 Voir[README.md](./100/README.md)
 
-## 200 - Exigences
+## 200 - Requirements
 
 Voir[README.md](./200/README.md)
 
-## 300 - Créer notre application
+## 300 - Construire notre application
 
 Voir[README.md](./300/README.md)
 
