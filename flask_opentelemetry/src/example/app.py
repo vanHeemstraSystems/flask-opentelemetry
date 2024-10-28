@@ -1,10 +1,22 @@
 from flask import Flask, request, render_template_string, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from opentelemetry import trace
 from sqlalchemy.orm import Mapped, mapped_column
+import logging
+
+# Initialize the logger
+logging.basicConfig(
+    level=logging.INFO,  # Log level can be adjusted based on need (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+    format='%(asctime)s - %(levelname)s - %(message)s'  # Log format with timestamp
+)
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///tasks.db"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db = SQLAlchemy()
+
+tracer = trace.get_tracer("task.tracer")
 
 # Define a database model named Task for storing task data
 class Task(db.Model):
@@ -95,7 +107,9 @@ HOME_HTML = """
 # Define route for the home page to display tasks
 @app.route("/", methods=["GET"])
 def home():
-    tasks = Task.query.all()  # Retrieve all tasks from the database
+    with tracer.start_as_current_span("querying_tasks"):
+        tasks = Task.query.all()  # Retrieve all tasks from the database
+        logging.info(f'Fetched {len(tasks)} tasks from the database')
     return render_template_string(
         HOME_HTML, tasks=tasks
     )  # Render the homepage with tasks listed
@@ -105,19 +119,26 @@ def home():
 def add():
     task_description = request.form["task"]  # Extract task description from form data
     new_task = Task(description=task_description)  # Create new Task instance
-    db.session.add(new_task)  # Add new task to database session
-    db.session.commit()  # Commit changes to the database
+    with tracer.start_as_current_span("adding_task"):
+        db.session.add(new_task)  # Add new task to database session
+        db.session.commit()  # Commit changes to the database
+        logging.info(f'Added new task with description: {task_description}')    
     return redirect(url_for("home"))  # Redirect to the home page
 
 # Define route to delete tasks based on task ID
 @app.route("/delete/<int:task_id>", methods=["GET"])
 def delete(task_id: int):
-    task_to_delete = Task.query.get(task_id)  # Get task by ID
-    if task_to_delete:
-        db.session.delete(task_to_delete)  # Remove task from the database session
-        db.session.commit()  # Commit the change to the database
+    with tracer.start_as_current_span("deleting_task"):
+        task_to_delete = Task.query.get(task_id)  # Get task by ID
+        if task_to_delete:
+            db.session.delete(task_to_delete)  # Remove task from the database session
+            db.session.commit()  # Commit the change to the database
+            logging.info(f'Deleted task with ID: {task_id}')
+        else:
+            logging.warning(f'Attempted to delete a task with ID: {task_id}, but it was not found')        
     return redirect(url_for("home"))  # Redirect to the home page
 
 # Check if the script is the main program and run the app
 if __name__ == "__main__":
+    logging.info('Starting the Flask app...')  
     app.run()  # Start the Flask application
