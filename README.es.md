@@ -15,7 +15,7 @@ Después[instalación](./300/100/README.md), ejecútelo con:
 
 Abra un navegador web en http&#x3A;//localhost:5000
 
-Verás un`To-Do List` app. You can add or delete tasks.
+You will see a `To-Do List`aplicación. Puede agregar o eliminar tareas.
 
 Detenga el servidor (CTRL+C) y en la misma terminal ejecute:
 
@@ -183,7 +183,7 @@ En la terminal, verá un resultado similar:
         }
     }
 
-El recopilador OpenTelemetry (OTel) se ejecuta en el puerto 4317, por lo que cualquier otro mensaje de error que no sea un error de tiempo de espera/conexión (p. ej.`Transient error StatusCode.UNAVAILABLE encountered while exporting traces to localhost:4317, retrying in 2s.`), significa que la aplicación se está ejecutando:
+The OpenTelemetry (OTel) collector runs on port 4317, so any other error message than a timeout/connection error (e.g. `Transient error StatusCode.UNAVAILABLE encountered while exporting traces to localhost:4317, retrying in 2s.`), significa que la aplicación se está ejecutando:
 
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
