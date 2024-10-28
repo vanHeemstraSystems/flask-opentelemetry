@@ -8,7 +8,7 @@
 
 **執行摘要**
 
-後[安裝](./300/100/README.md)，運行它：
+後[安裝](./300/100/README.md), run it with:
 
     $ cd flask_opentelemetry/src/example
     $ flask run
@@ -24,16 +24,16 @@
 其次是：
 
     opentelemetry-instrument \
-      --traces_exporter console, otlp \
+      --traces_exporter console \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
       flask run -p 5000
 
-或者，您可以使用環境變數來配置代理：
+Alternatively, you can use environment variables to configure the agent:
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console, otlp \
+    OTEL_TRACES_EXPORTER=console \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
     OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
@@ -44,11 +44,11 @@
 
 你會看到同樣的`To-Do List`應用程式.您可以新增或刪除任務。
 
-但是在連接埠 4317 上...
+但在連接埠 4317 上，OpenTelemetry 伺服器正在偵聽。
 
 ## 100 - 簡介
 
-看[README.md](./100/README.md)
+See [README.md](./100/README.md)
 
 ## 200 - 要求
 

@@ -24,7 +24,7 @@ Stoppen Sie den Server (STRG+C) und führen Sie im selben Terminal Folgendes aus
 Gefolgt von:
 
     opentelemetry-instrument \
-      --traces_exporter console, otlp \
+      --traces_exporter console \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
@@ -33,7 +33,7 @@ Gefolgt von:
 Alternativ können Sie Umgebungsvariablen verwenden, um den Agenten zu konfigurieren:
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console, otlp \
+    OTEL_TRACES_EXPORTER=console \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
     OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
@@ -44,7 +44,7 @@ Alternativ können Sie Umgebungsvariablen verwenden, um den Agenten zu konfiguri
 
 Sie werden dasselbe sehen`To-Do List`App. Sie können Aufgaben hinzufügen oder löschen.
 
-Aber auf Port 4317 ...
+Aber auf Port 4317 lauscht der OpenTelemetry-Server.
 
 ## 100 - Einführung
 

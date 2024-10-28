@@ -2,7 +2,7 @@ kolf-opentelemetrie
 
 # Kolf OpenTelemetrie
 
-> OpenTelemetry (OTel) is een open-source, leveranciersneutraal observatieframework dat is ontworpen om met elk backend-systeem te werken. Het biedt gestandaardiseerde API's, bibliotheken en hulpmiddelen voor het verzamelen van telemetriegegevens, zoals statistieken, logboeken en sporen. Deze lezing is bedoeld om een ​​startpunt te bieden voor het werken met OpenTelemetry in Flask.
+> OpenTelemetry (OTel) is an open-source, vendor-neutral observability framework designed to work with any backend system. It provides standardized APIs, libraries, and tools to collect telemetry data, such as metrics, logs, and traces. This talk is intended to provide a starting point for working with OpenTelemetry in Flask.
 
 [Referenties](./REFERENCES.md)
 
@@ -13,9 +13,9 @@ Na[installatie](./300/100/README.md), voer het uit met:
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-Open een webbrowser op http&#x3A;//localhost:5000
+Open a web browser at http&#x3A;//localhost:5000
 
-You will see a `To-Do List`app. U kunt taken toevoegen of verwijderen.
+Je ziet een`To-Do List`app. U kunt taken toevoegen of verwijderen.
 
 Stop de server (CTRL+C) en voer in dezelfde terminal uit:
 
@@ -24,7 +24,7 @@ Stop de server (CTRL+C) en voer in dezelfde terminal uit:
 Gevolgd door:
 
     opentelemetry-instrument \
-      --traces_exporter console, otlp \
+      --traces_exporter console \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
@@ -33,7 +33,7 @@ Gevolgd door:
 Als alternatief kunt u omgevingsvariabelen gebruiken om de agent te configureren:
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console, otlp \
+    OTEL_TRACES_EXPORTER=console \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
     OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
@@ -44,7 +44,7 @@ Open een webbrowser op http&#x3A;//localhost:5000
 
 Je zult hetzelfde zien`To-Do List`app. U kunt taken toevoegen of verwijderen.
 
-Maar op poort 4317...
+Maar op poort 4317 luistert de OpenTelemetry-server.
 
 ## 100 - Inleiding
 
@@ -52,7 +52,7 @@ Zien[README.md](./100/README.md)
 
 ## 200 - Vereisten
 
-See [README.md](./200/README.md)
+Zien[README.md](./200/README.md)
 
 ## 300 - Onze applicatie bouwen
 

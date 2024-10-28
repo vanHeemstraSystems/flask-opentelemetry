@@ -15,7 +15,7 @@
 
 打开 Web 浏览器 http&#x3A;//localhost:5000
 
-你会看到一个`To-Do List`应用程序。您可以添加或删除任务。
+You will see a `To-Do List`应用程序。您可以添加或删除任务。
 
 停止服务器 (CTRL+C) 并在同一终端中运行：
 
@@ -24,7 +24,7 @@
 其次是：
 
     opentelemetry-instrument \
-      --traces_exporter console, otlp \
+      --traces_exporter console \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
@@ -33,7 +33,7 @@
 或者，您可以使用环境变量来配置代理：
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console, otlp \
+    OTEL_TRACES_EXPORTER=console \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
     OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
@@ -44,7 +44,7 @@
 
 你会看到同样的`To-Do List`应用程序。您可以添加或删除任务。
 
-但是在端口 4317 上...
+但在端口 4317 上，OpenTelemetry 服务器正在侦听。
 
 ## 100 - 简介
 
@@ -56,7 +56,7 @@
 
 ## 300 - 构建我们的应用程序
 
-See [README.md](./300/README.md)
+看[README.md](./300/README.md)
 
 ## 400 - 结论
 
