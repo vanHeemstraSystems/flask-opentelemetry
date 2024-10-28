@@ -7,7 +7,7 @@
 -   [詞彙表](./GLOSSARY.md)
 -   [參考](./REFERENCES.md)
 
-**Executive Summary**
+**執行摘要**
 
 後[安裝](./300/100/README.md)，運行它：
 
