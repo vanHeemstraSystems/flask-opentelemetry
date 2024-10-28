@@ -9,7 +9,7 @@ Kolben-Open-Telemetrie
 
 **Zusammenfassung**
 
-After [Installation](./300/100/README.md), führe es aus mit:
+Nach[Installation](./300/100/README.md), führe es aus mit:
 
     $ cd flask_opentelemetry/src/example
     $ flask run
@@ -22,7 +22,7 @@ Stoppen Sie den Server (STRG+C) und führen Sie im selben Terminal Folgendes aus
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Anschließend erfolgt der Start der Anwendung über den Agenten (siehe[reference](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) und führen Sie eine Textprotokolldatei:
+Anschließend erfolgt der Start der Anwendung über den Agenten (siehe[Referenz](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) und führen Sie eine Textprotokolldatei:
 
     opentelemetry-instrument \
       --traces_exporter console \
