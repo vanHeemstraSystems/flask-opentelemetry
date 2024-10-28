@@ -21,7 +21,7 @@ Arrêtez le serveur (CTRL+C) et dans le même terminal exécutez :
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Suivi du démarrage de l'application via l'agent (voir référence) et de la conservation d'un fichier journal texte :
+Suivi du démarrage de l'application via l'agent (voir[référence](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) et conservez un fichier journal texte :
 
     opentelemetry-instrument \
       --traces_exporter console \
@@ -188,7 +188,7 @@ Le collecteur OpenTelemetry (OTel) s'exécute sur le port 4317, donc tout autre 
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
 
-Si le collecteur OTel ne fonctionne pas, vous obtenez :
+Si OTel Collector ne fonctionne pas, vous obtenez :
 
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
@@ -201,7 +201,7 @@ Vous pouvez récupérer n'importe quelle URL du fichier journal texte :
 
     $ cat output.log | grep http.host
 
-Vous verrez une sortie comme :
+You will see an output like:
 
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
@@ -214,7 +214,7 @@ Filtrons dans l'interface utilisateur de Jaeger (<http://0.0.0.0:16686/>) pour l
 
 PLUS
 
-## 100 - Introduction
+## 100 - Présentation
 
 Voir[README.md](./100/README.md)
 
