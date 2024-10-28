@@ -70,6 +70,9 @@ curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refuse
 
 With this setup, in addition to the open telemetry collector, we also get [Jaeger UI](https://github.com/jaegertracing/jaeger-ui) running under http://0.0.0.0:16686/ which will help in visualizing the calls.
 
+The client and server send data directly to the OTel Collector;
+The OTel Collector then sends the data to the appropriate backend, in this demo Jaeger.
+
 You can grep any urls from the text logfile:
 
 ```
