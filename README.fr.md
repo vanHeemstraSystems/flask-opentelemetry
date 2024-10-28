@@ -24,7 +24,7 @@ Arrêtez le serveur (CTRL+C) et dans le même terminal exécutez :
 Suivi de:
 
     opentelemetry-instrument \
-      --traces_exporter console, otlp \
+      --traces_exporter console \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
@@ -33,18 +33,18 @@ Suivi de:
 Vous pouvez également utiliser des variables d'environnement pour configurer l'agent :
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console, otlp \
+    OTEL_TRACES_EXPORTER=console \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
     OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
     opentelemetry-instrument \
         flask run -p 5000
 
-Open a web browser at http&#x3A;//localhost:5000
+Ouvrez un navigateur Web sur http&#x3A;//localhost:5000
 
 Tu verras la même chose`To-Do List`application. Vous pouvez ajouter ou supprimer des tâches.
 
-Mais sur le port 4317...
+Mais sur le port 4317, le serveur OpenTelemetry écoute.
 
 ## 100 - Introduction
 
