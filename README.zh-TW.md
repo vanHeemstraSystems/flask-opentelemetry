@@ -15,28 +15,36 @@
 
 開啟 Web 瀏覽器 http&#x3A;//localhost:5000
 
-Stop the server (CTRL+C) and in the same terminal run:
+你會看到一個`To-Do List`應用程式.您可以新增或刪除任務。
+
+停止伺服器 (CTRL+C) 並在同一終端機中運作：
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
 其次是：
 
     opentelemetry-instrument \
-      --traces_exporter console \
+      --traces_exporter console, otlp \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
-      flask run -p 8080
+      flask run -p 5000
 
 或者，您可以使用環境變數來配置代理：
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console \
+    OTEL_TRACES_EXPORTER=console, otlp \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
-    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
     opentelemetry-instrument \
-        flask run
+        flask run -p 5000
+
+開啟 Web 瀏覽器 http&#x3A;//localhost:5000
+
+你會看到同樣的`To-Do List`應用程式.您可以新增或刪除任務。
+
+但是在連接埠 4317 上...
 
 ## 100 - 簡介
 
