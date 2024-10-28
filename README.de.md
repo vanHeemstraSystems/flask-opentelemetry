@@ -2,7 +2,7 @@ Kolben-Open-Telemetrie
 
 # Flasche OpenTelemetry
 
-> OpenTelemetry (OTel) is an open-source, vendor-neutral observability framework designed to work with any backend system. It provides standardized APIs, libraries, and tools to collect telemetry data, such as metrics, logs, and traces. This talk is intended to provide a starting point for working with OpenTelemetry in Flask.
+> OpenTelemetry (OTel) ist ein herstellerneutrales Open-Source-Observability-Framework, das für die Zusammenarbeit mit jedem Backend-System entwickelt wurde. Es bietet standardisierte APIs, Bibliotheken und Tools zum Sammeln von Telemetriedaten wie Metriken, Protokollen und Traces. Dieser Vortrag soll einen Ausgangspunkt für die Arbeit mit OpenTelemetry in Flask bieten.
 
 [Referenzen](./REFERENCES.md)
 
@@ -18,7 +18,7 @@ Sehen[README.md](./100/README.md)
 
 Sehen[README.md](./200/README.md)
 
-## 300 - Building Our Application
+## 300 – Erstellen unserer Anwendung
 
 Sehen[README.md](./300/README.md)
 
