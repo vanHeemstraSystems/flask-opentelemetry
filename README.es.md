@@ -6,7 +6,7 @@ matraz-opentelemetria
 
 [Referencias](./REFERENCES.md)
 
-**Resumen ejecutivo**
+**Executive Summary**
 
 Después[instalación](./300/100/README.md), ejecútelo con:
 
@@ -21,7 +21,7 @@ Detenga el servidor (CTRL+C) y en la misma terminal ejecute:
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Seguido por iniciar la aplicación a través del agente (ver referencia) y mantener un archivo de registro de texto:
+Seguido de iniciar la aplicación a través del agente (ver[referencia](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) y mantener un archivo de registro de texto:
 
     opentelemetry-instrument \
       --traces_exporter console \
@@ -188,7 +188,7 @@ El recopilador OpenTelemetry (OTel) se ejecuta en el puerto 4317, por lo que cua
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
 
-Si OTel Collector no se está ejecutando, obtendrá:
+If the OTel Collector is not running you get:
 
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
