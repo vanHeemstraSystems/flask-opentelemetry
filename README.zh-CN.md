@@ -21,7 +21,7 @@
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Followed by starting the application via the agent (see reference) and keep a text log file:
+接下来通过代理启动应用程序（请参阅参考资料）并保留文本日志文件：
 
     opentelemetry-instrument \
       --traces_exporter console \
@@ -193,7 +193,7 @@ OpenTelemetry (OTel) 收集器在端口 4317 上运行，因此除超时/连接�
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-通过此设置，除了开放遥测收集器之外，我们还获得[耶格用户界面](https://github.com/jaegertracing/jaeger-ui)运行在<http://0.0.0.0:16686/>这将有助于可视化通话。
+通过此设置，除了开放遥测收集器之外，我们还获得[耶格用户界面](https://github.com/jaegertracing/jaeger-ui)运行在<http://0.0.0.0:16686/>这将有助于可视化通话。支持的替代 UI 有`Prometheus`和`ZipKin`.
 
 客户端和服务器直接向OTel Collector发送数据；然后，OTel Collector 将数据发送到适当的后端，在此演示中为 Jaeger。
 
@@ -208,7 +208,7 @@ OpenTelemetry (OTel) 收集器在端口 4317 上运行，因此除超时/连接�
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
     ...
 
-The collected telemetry is helpful to understand the amount and latency of the requests over time. 
+收集的遥测数据有助于了解一段时间内请求的数量和延迟。
 
 让我们在 Jaeger UI 中进行过滤（<http://0.0.0.0:16686/>) 对于使用标签的 URL 之一`== url goes here ==`.
 
@@ -222,7 +222,7 @@ The collected telemetry is helpful to understand the amount and latency of the r
 
 看[README.md](./200/README.md)
 
-## 300 - Building Our Application
+## 300 - 构建我们的应用程序
 
 看[README.md](./300/README.md)
 
