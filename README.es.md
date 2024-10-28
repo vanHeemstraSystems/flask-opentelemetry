@@ -1,6 +1,6 @@
-nombre-repositorio
+matraz-opentelemetria
 
-# Nombre del repositorio
+# Flask OpenTelemetría
 
 > línea de bala
 
