@@ -211,11 +211,11 @@ OpenTelemetry (OTel) 收集器在端口 4317 上运行，因此除超时/连接�
 
 收集的遥测数据有助于了解一段时间内请求的数量和延迟。
 
-让我们在 Jaeger UI 中进行过滤（<http://0.0.0.0:16686/>) for one of the URLs using the tag `== url goes here ==`.
+让我们在 Jaeger UI 中进行过滤（<http://0.0.0.0:16686/>) 对于使用标签的 URL 之一`== url goes here ==`.
 
 更多的
 
-## 100 - Introduction
+## 100 - 简介
 
 看[README.md](./100/README.md)
 
