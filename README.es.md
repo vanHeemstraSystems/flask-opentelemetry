@@ -6,13 +6,13 @@ matraz-opentelemetria
 
 [Referencias](./REFERENCES.md)
 
-**Resumen ejecutivo**
+**Executive Summary**
 
 Después[instalación](./300/100/README.md), ejecútelo con:
 
 MÁS
 
-## 100 - Introduction
+## 100 - Introducción
 
 Ver[README.md](./100/README.md)
 
@@ -24,6 +24,6 @@ Ver[README.md](./200/README.md)
 
 Ver[README.md](./300/README.md)
 
-## 400 - Conclusion
+## 400 - Conclusión
 
 Ver[README.md](./400/README.md)
