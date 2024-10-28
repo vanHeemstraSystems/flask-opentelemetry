@@ -2,7 +2,7 @@ matraz-opentelemetria
 
 # Flask OpenTelemetría
 
-> línea de bala
+> OpenTelemetry (OTel) es un marco de observabilidad de código abierto y de proveedor neutral diseñado para funcionar con cualquier sistema backend. Proporciona API, bibliotecas y herramientas estandarizadas para recopilar datos de telemetría, como métricas, registros y seguimientos. Esta charla pretende proporcionar un punto de partida para trabajar con OpenTelemetry en Flask.
 
 [Referencias](./REFERENCES.md)
 
@@ -18,7 +18,7 @@ Ver[README.md](./100/README.md)
 
 Ver[README.md](./200/README.md)
 
-## 300 - Construyendo nuestra aplicación
+## 300 - Building Our Application
 
 Ver[README.md](./300/README.md)
 
