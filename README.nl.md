@@ -4,7 +4,8 @@ kolf-opentelemetrie
 
 > OpenTelemetry (OTel) is een open-source, leveranciersneutraal observatieframework dat is ontworpen om met elk backend-systeem te werken. Het biedt gestandaardiseerde API's, bibliotheken en hulpmiddelen voor het verzamelen van telemetriegegevens, zoals statistieken, logboeken en sporen. Deze lezing is bedoeld om een ​​startpunt te bieden voor het werken met OpenTelemetry in Flask.
 
-[Referenties](./REFERENCES.md)
+-   [Glossarium](./GLOSSARY.md)
+-   [Referenties](./REFERENCES.md)
 
 **Samenvatting**
 
