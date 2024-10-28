@@ -1,0 +1,5 @@
+flask 
+flask_sqlalchemy 
+elasticapm.contrib.flask 
+elasticapm.contrib.opentelemetry
+sqlalchemy.orm
