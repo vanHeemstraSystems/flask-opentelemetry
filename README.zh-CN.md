@@ -6,7 +6,7 @@
 
 [参考](./REFERENCES.md)
 
-**执行摘要**
+**Executive Summary**
 
 后[安装](./300/100/README.md)，运行它：
 
@@ -15,7 +15,7 @@
 
 打开 Web 浏览器 http&#x3A;//localhost:5000
 
-在单独的终端窗口中运行：
+停止服务器 (CTRL+C) 并在同一终端中运行：
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
@@ -28,7 +28,17 @@
       --service_name todo \
       flask run -p 8080
 
-## 100 - 简介
+或者，您可以使用环境变量来配置代理：
+
+    OTEL_SERVICE_NAME=todo \
+    OTEL_TRACES_EXPORTER=console \
+    OTEL_METRICS_EXPORTER=console \
+    OTEL_LOG_EXPORTER=console
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+    opentelemetry-instrument \
+        flask run
+
+## 100 - Introduction
 
 看[README.md](./100/README.md)
 
