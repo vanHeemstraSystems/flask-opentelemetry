@@ -1,6 +1,6 @@
-repositorynaam
+kolf-opentelemetrie
 
-# Naam van opslagplaats
+# Kolf OpenTelemetrie
 
 > Slaklijn
 
