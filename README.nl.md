@@ -13,7 +13,9 @@ Na[installatie](./300/100/README.md), voer het uit met:
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-Open een webbrowser op http&#x3A;//localhost: 5000
+Open een webbrowser op http&#x3A;//localhost:5000
+
+You will see a `To-Do List`app. U kunt taken toevoegen of verwijderen.
 
 Stop de server (CTRL+C) en voer in dezelfde terminal uit:
 
@@ -22,21 +24,27 @@ Stop de server (CTRL+C) en voer in dezelfde terminal uit:
 Gevolgd door:
 
     opentelemetry-instrument \
-      --traces_exporter console \
+      --traces_exporter console, otlp \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
-      flask run -p 8080
+      flask run -p 5000
 
 Als alternatief kunt u omgevingsvariabelen gebruiken om de agent te configureren:
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console \
+    OTEL_TRACES_EXPORTER=console, otlp \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
-    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
     opentelemetry-instrument \
-        flask run
+        flask run -p 5000
+
+Open een webbrowser op http&#x3A;//localhost:5000
+
+Je zult hetzelfde zien`To-Do List`app. U kunt taken toevoegen of verwijderen.
+
+Maar op poort 4317...
 
 ## 100 - Inleiding
 
@@ -44,11 +52,11 @@ Zien[README.md](./100/README.md)
 
 ## 200 - Vereisten
 
-Zien[README.md](./200/README.md)
+See [README.md](./200/README.md)
 
 ## 300 - Onze applicatie bouwen
 
-See [README.md](./300/README.md)
+Zien[README.md](./300/README.md)
 
 ## 400 - Conclusie
 

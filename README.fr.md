@@ -6,14 +6,16 @@ télémétrie à ouverture de flacon
 
 [Références](./REFERENCES.md)
 
-**Executive Summary**
+**Résumé exécutif**
 
 Après[installation](./300/100/README.md), exécutez-le avec :
 
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-Ouvrez un navigateur Web sur http&#x3A;//localhost : 5000
+Ouvrez un navigateur Web sur http&#x3A;//localhost:5000
+
+Vous verrez un`To-Do List`application. Vous pouvez ajouter ou supprimer des tâches.
 
 Arrêtez le serveur (CTRL+C) et dans le même terminal exécutez :
 
@@ -22,23 +24,29 @@ Arrêtez le serveur (CTRL+C) et dans le même terminal exécutez :
 Suivi de:
 
     opentelemetry-instrument \
-      --traces_exporter console \
+      --traces_exporter console, otlp \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
-      flask run -p 8080
+      flask run -p 5000
 
 Vous pouvez également utiliser des variables d'environnement pour configurer l'agent :
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console \
+    OTEL_TRACES_EXPORTER=console, otlp \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
-    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
     opentelemetry-instrument \
-        flask run
+        flask run -p 5000
 
-## 100 - Présentation
+Open a web browser at http&#x3A;//localhost:5000
+
+Tu verras la même chose`To-Do List`application. Vous pouvez ajouter ou supprimer des tâches.
+
+Mais sur le port 4317...
+
+## 100 - Introduction
 
 Voir[README.md](./100/README.md)
 

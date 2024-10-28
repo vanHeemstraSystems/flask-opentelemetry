@@ -15,6 +15,8 @@ Nach[Installation](./300/100/README.md), führe es aus mit:
 
 Öffnen Sie einen Webbrowser unter http&#x3A;//localhost:5000
 
+Sie werden ein sehen`To-Do List`App. Sie können Aufgaben hinzufügen oder löschen.
+
 Stoppen Sie den Server (STRG+C) und führen Sie im selben Terminal Folgendes aus:
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
@@ -22,23 +24,29 @@ Stoppen Sie den Server (STRG+C) und führen Sie im selben Terminal Folgendes aus
 Gefolgt von:
 
     opentelemetry-instrument \
-      --traces_exporter console \
+      --traces_exporter console, otlp \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
-      flask run -p 8080
+      flask run -p 5000
 
 Alternativ können Sie Umgebungsvariablen verwenden, um den Agenten zu konfigurieren:
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console \
+    OTEL_TRACES_EXPORTER=console, otlp \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
-    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
     opentelemetry-instrument \
-        flask run
+        flask run -p 5000
 
-## 100 - Introduction
+Öffnen Sie einen Webbrowser unter http&#x3A;//localhost:5000
+
+Sie werden dasselbe sehen`To-Do List`App. Sie können Aufgaben hinzufügen oder löschen.
+
+Aber auf Port 4317 ...
+
+## 100 - Einführung
 
 Sehen[README.md](./100/README.md)
 

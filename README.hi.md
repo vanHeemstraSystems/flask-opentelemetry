@@ -1,8 +1,8 @@
-फ्लास्क-ओपनटेलीमेट्री
+flask-opentelemetry
 
 # फ्लास्क ओपनटेलीमेट्री
 
-> ओपन टेलीमेट्री (ओटेल) एक ओपन-सोर्स, विक्रेता-तटस्थ अवलोकन ढांचा है जिसे किसी भी बैकएंड सिस्टम के साथ काम करने के लिए डिज़ाइन किया गया है। यह मेट्रिक्स, लॉग और ट्रेस जैसे टेलीमेट्री डेटा एकत्र करने के लिए मानकीकृत एपीआई, लाइब्रेरी और टूल प्रदान करता है। इस वार्ता का उद्देश्य फ्लास्क में ओपनटेलीमेट्री के साथ काम करने के लिए एक प्रारंभिक बिंदु प्रदान करना है।
+> ओपनटेलीमेट्री (ओटेल) एक ओपन-सोर्स, विक्रेता-तटस्थ अवलोकन ढांचा है जिसे किसी भी बैकएंड सिस्टम के साथ काम करने के लिए डिज़ाइन किया गया है। यह मेट्रिक्स, लॉग और ट्रेस जैसे टेलीमेट्री डेटा एकत्र करने के लिए मानकीकृत एपीआई, लाइब्रेरी और टूल प्रदान करता है। इस वार्ता का उद्देश्य फ्लास्क में ओपनटेलीमेट्री के साथ काम करने के लिए एक प्रारंभिक बिंदु प्रदान करना है।
 
 [संदर्भ](./REFERENCES.md)
 
@@ -13,7 +13,9 @@
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-http&#x3A;//localhost: 5000 पर एक वेब ब्राउज़र खोलें
+http&#x3A;//localhost:5000 पर एक वेब ब्राउज़र खोलें
+
+आप एक देखेंगे`To-Do List`अनुप्रयोग। आप कार्य जोड़ या हटा सकते हैं.
 
 सर्वर बंद करें (CTRL+C) और उसी टर्मिनल में चलाएँ:
 
@@ -22,21 +24,27 @@ http&#x3A;//localhost: 5000 पर एक वेब ब्राउज़र ख
 के बाद:
 
     opentelemetry-instrument \
-      --traces_exporter console \
+      --traces_exporter console, otlp \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
-      flask run -p 8080
+      flask run -p 5000
 
 वैकल्पिक रूप से, आप एजेंट को कॉन्फ़िगर करने के लिए पर्यावरण चर का उपयोग कर सकते हैं:
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console \
+    OTEL_TRACES_EXPORTER=console, otlp \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
-    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
     opentelemetry-instrument \
-        flask run
+        flask run -p 5000
+
+http&#x3A;//localhost:5000 पर एक वेब ब्राउज़र खोलें
+
+तुम्हें वैसा ही दिखेगा`To-Do List`अनुप्रयोग। आप कार्य जोड़ या हटा सकते हैं.
+
+लेकिन पोर्ट 4317 पर...
 
 ## 100 - परिचय
 
@@ -44,7 +52,7 @@ http&#x3A;//localhost: 5000 पर एक वेब ब्राउज़र ख
 
 ## 200 - आवश्यकताएँ
 
-See [README.md](./200/README.md)
+देखना[README.md](./200/README.md)
 
 ## 300 - हमारे एप्लिकेशन का निर्माण
 
