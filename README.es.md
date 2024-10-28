@@ -2,7 +2,7 @@ matraz-opentelemetria
 
 # Flask OpenTelemetría
 
-> OpenTelemetry (OTel) es un marco de observabilidad de código abierto y de proveedor neutral diseñado para funcionar con cualquier sistema backend. Proporciona API, bibliotecas y herramientas estandarizadas para recopilar datos de telemetría, como métricas, registros y seguimientos. Esta charla pretende proporcionar un punto de partida para trabajar con OpenTelemetry en Flask.
+> OpenTelemetry (OTel) is an open-source, vendor-neutral observability framework designed to work with any backend system. It provides standardized APIs, libraries, and tools to collect telemetry data, such as metrics, logs, and traces. This talk is intended to provide a starting point for working with OpenTelemetry in Flask.
 
 -   [Glosario](./GLOSSARY.md)
 -   [Referencias](./REFERENCES.md)
@@ -46,7 +46,7 @@ Alternativamente, puede utilizar variables de entorno para configurar el agente:
 
 Abra un navegador web en http&#x3A;//localhost:5000
 
-Verás lo mismo`To-Do List` app. You can add or delete tasks.
+Verás lo mismo`To-Do List`aplicación. Puede agregar o eliminar tareas.
 
 En la terminal, verá un resultado similar:
 
@@ -194,7 +194,7 @@ Si OTel Collector no se está ejecutando, obtendrá:
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Con esta configuración, además del OTel Collector, también obtenemos[Interfaz de usuario de Jaeger](https://github.com/jaegertracing/jaeger-ui) running under <http://0.0.0.0:16686/>lo que ayudará a visualizar las llamadas. Las UI alternativas que son compatibles son`Prometheus`y`ZipKin`.
+Con esta configuración, además del OTel Collector, también obtenemos[Interfaz de usuario de Jaeger](https://github.com/jaegertracing/jaeger-ui)corriendo bajo<http://0.0.0.0:16686/>lo que ayudará a visualizar las llamadas. Las UI alternativas que son compatibles son`Prometheus`y`ZipKin`.
 
 El cliente y el servidor envían datos directamente al OTel Collector; Luego, OTel Collector envía los datos al backend apropiado, en esta demostración`Jaeger`.
 
@@ -211,7 +211,7 @@ Verá un resultado como:
 
 La telemetría recopilada es útil para comprender la cantidad y la latencia de las solicitudes a lo largo del tiempo.
 
-Let’s filter in Jaeger UI (<http://0.0.0.0:16686/>) para una de las URL que utilizan la etiqueta`== url goes here ==`.
+Filtremos en Jaeger UI (<http://0.0.0.0:16686/>) para una de las URL que utilizan la etiqueta`== url goes here ==`.
 
 MÁS
 
