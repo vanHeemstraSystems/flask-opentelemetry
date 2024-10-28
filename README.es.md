@@ -15,6 +15,19 @@ Después[instalación](./300/100/README.md), ejecútelo con:
 
 Abra un navegador web en http&#x3A;//localhost: 5000
 
+En una ventana de terminal separada, ejecute:
+
+    $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+
+Seguido por:
+
+    opentelemetry-instrument \
+      --traces_exporter console \
+      --metrics_exporter console \
+      --logs_exporter console \
+      --service_name todo \
+      flask run -p 8080
+
 ## 100 - Introducción
 
 Ver[README.md](./100/README.md)
@@ -27,6 +40,6 @@ Ver[README.md](./200/README.md)
 
 Ver[README.md](./300/README.md)
 
-## 400 - Conclusion
+## 400 - Conclusión
 
 Ver[README.md](./400/README.md)
