@@ -8,14 +8,14 @@
 
 **執行摘要**
 
-After [安裝](./300/100/README.md)，運行它：
+後[安裝](./300/100/README.md)，運行它：
 
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-Open a web browser at http&#x3A;//localhost: 5000
+開啟 Web 瀏覽器 http&#x3A;//localhost:5000
 
-停止伺服器 (CTRL+C) 並在同一終端機中運作：
+Stop the server (CTRL+C) and in the same terminal run:
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
@@ -46,10 +46,10 @@ Open a web browser at http&#x3A;//localhost: 5000
 
 看[README.md](./200/README.md)
 
-## 300 - Building Our Application
+## 300 - 建立我們的應用程式
 
 看[README.md](./300/README.md)
 
-## 400 - Conclusion
+## 400 - 結論
 
 看[README.md](./400/README.md)
