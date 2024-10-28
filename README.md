@@ -1,5 +1,5 @@
-repository-name
-# Repository Name
+flask-opentelemetry
+# Flask OpenTelemetry
 
 > Slugline
 
