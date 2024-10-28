@@ -16,7 +16,7 @@ $ flask run
 
 Open a web browser at http://localhost: 5000
 
-In a separate terminal window run:
+Stop the server (CTRL+C) and in the same terminal run:
 
 ```
 $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
@@ -31,6 +31,18 @@ opentelemetry-instrument \
   --logs_exporter console \
   --service_name todo \
   flask run -p 8080
+```
+
+Alternatively, you can use environment variables to configure the agent:
+
+```
+OTEL_SERVICE_NAME=todo \
+OTEL_TRACES_EXPORTER=console \
+OTEL_METRICS_EXPORTER=console \
+OTEL_LOG_EXPORTER=console
+OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+opentelemetry-instrument \
+    flask run
 ```
 
 ## 100 - Introduction
