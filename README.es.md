@@ -6,11 +6,14 @@ matraz-opentelemetria
 
 [Referencias](./REFERENCES.md)
 
-**Executive Summary**
+**Resumen ejecutivo**
 
 Después[instalación](./300/100/README.md), ejecútelo con:
 
-MÁS
+    $ cd flask_opentelemetry/src/example
+    $ flask run
+
+Abra un navegador web en http&#x3A;//localhost: 5000
 
 ## 100 - Introducción
 
@@ -24,6 +27,6 @@ Ver[README.md](./200/README.md)
 
 Ver[README.md](./300/README.md)
 
-## 400 - Conclusión
+## 400 - Conclusion
 
 Ver[README.md](./400/README.md)
