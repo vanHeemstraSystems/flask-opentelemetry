@@ -38,7 +38,7 @@ Alternativ können Sie Umgebungsvariablen verwenden, um den Agenten zu konfiguri
     opentelemetry-instrument \
         flask run
 
-## 100 - Einführung
+## 100 - Introduction
 
 Sehen[README.md](./100/README.md)
 
