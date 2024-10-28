@@ -8,7 +8,9 @@ kolf-opentelemetrie
 
 **Samenvatting**
 
-Tekst
+Na[installatie](./300/100/README.md), voer het uit met:
+
+MEER
 
 ## 100 - Inleiding
 
@@ -16,7 +18,7 @@ Zien[README.md](./100/README.md)
 
 ## 200 - Vereisten
 
-Zien[README.md](./200/README.md)
+See [README.md](./200/README.md)
 
 ## 300 - Onze applicatie bouwen
 
