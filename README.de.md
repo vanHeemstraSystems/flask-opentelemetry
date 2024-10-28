@@ -15,6 +15,19 @@ Nach[Installation](./300/100/README.md), führe es aus mit:
 
 Öffnen Sie einen Webbrowser unter http&#x3A;//localhost:5000
 
+Führen Sie in einem separaten Terminalfenster Folgendes aus:
+
+    $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+
+Gefolgt von:
+
+    opentelemetry-instrument \
+      --traces_exporter console \
+      --metrics_exporter console \
+      --logs_exporter console \
+      --service_name todo \
+      flask run -p 8080
+
 ## 100 - Einführung
 
 Sehen[README.md](./100/README.md)
