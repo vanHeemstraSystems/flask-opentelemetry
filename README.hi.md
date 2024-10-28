@@ -10,7 +10,7 @@
 
 मूलपाठ
 
-## 100 - परिचय
+## 100 - Introduction
 
 देखना[README.md](./100/README.md)
 
