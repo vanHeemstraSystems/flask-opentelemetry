@@ -193,7 +193,7 @@ Als de collector niet actief is, krijgt u:
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Met deze opstelling krijgen we, naast de open telemetriecollector, ook[Jaeger-gebruikersinterface](https://github.com/jaegertracing/jaeger-ui)onderdoor rennen<http://0.0.0.0:16686/>wat zal helpen bij het visualiseren van de oproepen.
+Met deze opstelling krijgen we, naast de open telemetriecollector, ook[Jaeger-gebruikersinterface](https://github.com/jaegertracing/jaeger-ui)onder lopen<http://0.0.0.0:16686/>wat zal helpen bij het visualiseren van de oproepen. Alternatieve gebruikersinterfaces die worden ondersteund, zijn dat wel`Prometheus`En`ZipKin`.
 
 De client en server sturen gegevens rechtstreeks naar de OTel Collector; De OTel Collector stuurt de gegevens vervolgens naar de juiste backend, in deze demo van Jaeger.
 
