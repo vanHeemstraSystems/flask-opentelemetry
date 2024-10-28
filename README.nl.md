@@ -10,7 +10,10 @@ kolf-opentelemetrie
 
 Na[installatie](./300/100/README.md), voer het uit met:
 
-MEER
+    $ cd flask_opentelemetry/src/example
+    $ flask run
+
+Open een webbrowser op http&#x3A;//localhost: 5000
 
 ## 100 - Inleiding
 
