@@ -28,7 +28,7 @@ Followed by:
 
 ```
 opentelemetry-instrument \
-  --traces_exporter console, otlp \
+  --traces_exporter console \
   --metrics_exporter console \
   --logs_exporter console \
   --service_name todo \
@@ -39,7 +39,7 @@ Alternatively, you can use environment variables to configure the agent:
 
 ```
 OTEL_SERVICE_NAME=todo \
-OTEL_TRACES_EXPORTER=console, otlp \
+OTEL_TRACES_EXPORTER=console \
 OTEL_METRICS_EXPORTER=console \
 OTEL_LOG_EXPORTER=console
 OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
@@ -51,7 +51,7 @@ Open a web browser at http://localhost:5000
 
 You will see the same ```To-Do List``` app. You can add or delete tasks.
 
-But on port 4317 ...
+But on port 4317, the OpenTelemetry server is listening.
 
 ## 100 - Introduction
 
