@@ -9,7 +9,12 @@ flask-opentelemetry
 
 After [installation](./300/100/README.md), run it with:
 
-MORE
+```
+$ cd flask_opentelemetry/src/example
+$ flask run
+```
+
+Open a web browser at http://localhost: 5000
 
 ## 100 - Introduction
 
