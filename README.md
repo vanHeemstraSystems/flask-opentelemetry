@@ -24,7 +24,7 @@ Stop the server (CTRL+C) and in the same terminal run:
 $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 ```
 
-Followed by starting the application via the agent (see reference) and keep a text log file:
+Followed by starting the application via the agent (see [reference](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) and keep a text log file:
 
 ```
 opentelemetry-instrument \
