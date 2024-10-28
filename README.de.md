@@ -21,7 +21,7 @@ Stoppen Sie den Server (STRG+C) und führen Sie im selben Terminal Folgendes aus
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Anschließend starten Sie die Anwendung über den Agenten (siehe Referenz) und führen eine Textprotokolldatei:
+Anschließend erfolgt der Start der Anwendung über den Agenten (siehe[Referenz](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) und führen Sie eine Textprotokolldatei:
 
     opentelemetry-instrument \
       --traces_exporter console \
@@ -193,7 +193,7 @@ Wenn der OTel Collector nicht läuft, erhalten Sie:
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Mit diesem Setup erhalten wir zusätzlich zum OTel Collector auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui) running under <http://0.0.0.0:16686/>Dies hilft bei der Visualisierung der Anrufe. Folgende alternative Benutzeroberflächen werden unterstützt:`Prometheus`Und`ZipKin`.
+Mit diesem Setup erhalten wir zusätzlich zum OTel Collector auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)unterlaufen<http://0.0.0.0:16686/>Dies hilft bei der Visualisierung der Anrufe. Folgende alternative Benutzeroberflächen werden unterstützt:`Prometheus`Und`ZipKin`.
 
 Client und Server senden Daten direkt an den OTel Collector; In dieser Demo sendet der OTel Collector die Daten dann an das entsprechende Backend`Jaeger`.
 
@@ -218,7 +218,7 @@ MEHR
 
 Sehen[README.md](./100/README.md)
 
-## 200 - Requirements
+## 200 – Anforderungen
 
 Sehen[README.md](./200/README.md)
 
