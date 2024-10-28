@@ -14,7 +14,9 @@ $ cd flask_opentelemetry/src/example
 $ flask run
 ```
 
-Open a web browser at http://localhost: 5000
+Open a web browser at http://localhost:5000
+
+You will see a ```To-Do List``` app. You can add or delete tasks.
 
 Stop the server (CTRL+C) and in the same terminal run:
 
@@ -26,24 +28,30 @@ Followed by:
 
 ```
 opentelemetry-instrument \
-  --traces_exporter console \
+  --traces_exporter console, otlp \
   --metrics_exporter console \
   --logs_exporter console \
   --service_name todo \
-  flask run -p 8080
+  flask run -p 5000
 ```
 
 Alternatively, you can use environment variables to configure the agent:
 
 ```
 OTEL_SERVICE_NAME=todo \
-OTEL_TRACES_EXPORTER=console \
+OTEL_TRACES_EXPORTER=console, otlp \
 OTEL_METRICS_EXPORTER=console \
 OTEL_LOG_EXPORTER=console
-OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
 opentelemetry-instrument \
-    flask run
+    flask run -p 5000
 ```
+
+Open a web browser at http://localhost:5000
+
+You will see the same ```To-Do List``` app. You can add or delete tasks.
+
+But on port 4317 ...
 
 ## 100 - Introduction
 
