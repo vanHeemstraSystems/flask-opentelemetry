@@ -8,20 +8,22 @@ matraz-opentelemetria
 
 **Resumen ejecutivo**
 
-Texto
+Después[instalación](./300/100/README.md), ejecútelo con:
 
-## 100 - Introducción
+MÁS
+
+## 100 - Introduction
 
 Ver[README.md](./100/README.md)
 
 ## 200 - Requisitos
 
-See [README.md](./200/README.md)
+Ver[README.md](./200/README.md)
 
 ## 300 - Construyendo nuestra aplicación
 
 Ver[README.md](./300/README.md)
 
-## 400 - Conclusión
+## 400 - Conclusion
 
 Ver[README.md](./400/README.md)
