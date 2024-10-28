@@ -1,4 +1,4 @@
-flask-opentelemetry
+烧瓶开孔遥测
 
 # Flask 开放遥测
 
@@ -8,9 +8,12 @@ flask-opentelemetry
 
 **执行摘要**
 
-后[安装](./300/100/README.md)，运行它：
+After [安装](./300/100/README.md)，运行它：
 
-更多的
+    $ cd flask_opentelemetry/src/example
+    $ flask run
+
+打开 Web 浏览器 http&#x3A;//localhost:5000
 
 ## 100 - 简介
 
