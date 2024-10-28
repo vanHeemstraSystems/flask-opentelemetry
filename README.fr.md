@@ -10,7 +10,10 @@ télémétrie à ouverture de flacon
 
 Après[installation](./300/100/README.md), exécutez-le avec :
 
-PLUS
+    $ cd flask_opentelemetry/src/example
+    $ flask run
+
+Ouvrez un navigateur Web sur http&#x3A;//localhost : 5000
 
 ## 100 - Introduction
 
