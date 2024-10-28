@@ -59,13 +59,16 @@ Si le collecteur ne fonctionne pas, vous obtenez :
 
 Avec cette configuration, en plus du collecteur de télémétrie ouvert, nous obtenons également[Interface utilisateur Jaeger](https://github.com/jaegertracing/jaeger-ui)courir sous<http://0.0.0.0:16686/>ce qui aidera à visualiser les appels.
 
+Le client et le serveur envoient des données directement au collecteur OTel ;
+Le collecteur OTel envoie ensuite les données au backend approprié, dans cette démo Jaeger.
+
 Vous pouvez récupérer n'importe quelle URL du fichier journal texte :
 
     $ cat output.log | grep http.url
 
-La télémétrie collectée est utile pour comprendre la quantité et la latence des demandes au fil du temps. Filtrons dans l'interface utilisateur de Jaeger (<http://0.0.0.0:16686/>) pour l'une des URL utilisant la balise`url goes here`.
+The collected telemetry is helpful to understand the amount and latency of the requests over time. Let’s filter in Jaeger UI (<http://0.0.0.0:16686/>) pour l'une des URL utilisant la balise`url goes here`.
 
-## 100 - Présentation
+## 100 - Introduction
 
 Voir[README.md](./100/README.md)
 
