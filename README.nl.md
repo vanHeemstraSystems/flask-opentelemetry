@@ -4,7 +4,7 @@ kolf-opentelemetrie
 
 > OpenTelemetry (OTel) is een open-source, leveranciersneutraal observatieframework dat is ontworpen om met elk backend-systeem te werken. Het biedt gestandaardiseerde API's, bibliotheken en hulpmiddelen voor het verzamelen van telemetriegegevens, zoals statistieken, logboeken en sporen. Deze lezing is bedoeld om een ​​startpunt te bieden voor het werken met OpenTelemetry in Flask.
 
--   [Glossary](./GLOSSARY.md)
+-   [Glossarium](./GLOSSARY.md)
 -   [Referenties](./REFERENCES.md)
 
 **Samenvatting**
@@ -194,7 +194,7 @@ Als de OTel Collector niet actief is, krijgt u:
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Met deze opstelling krijgen we, naast de OTel Collector, ook[Jaeger-gebruikersinterface](https://github.com/jaegertracing/jaeger-ui)onderdoor rennen<http://0.0.0.0:16686/>wat zal helpen bij het visualiseren van de oproepen. Alternatieve gebruikersinterfaces die worden ondersteund, zijn dat wel`Prometheus`En`ZipKin`.
+Met deze opstelling krijgen we, naast de OTel Collector, ook[Jaeger-gebruikersinterface](https://github.com/jaegertracing/jaeger-ui)onder lopen<http://0.0.0.0:16686/>wat zal helpen bij het visualiseren van de oproepen. Alternatieve gebruikersinterfaces die worden ondersteund, zijn dat wel`Prometheus`En`ZipKin`.
 
 De client en server sturen gegevens rechtstreeks naar de OTel Collector; De OTel Collector stuurt de gegevens vervolgens in deze demo naar de juiste backend`Jaeger`.
 
@@ -221,11 +221,11 @@ Zien[README.md](./100/README.md)
 
 ## 200 - Vereisten
 
-See [README.md](./200/README.md)
+Zien[README.md](./200/README.md)
 
 ## 300 - Onze applicatie bouwen
 
-See [README.md](./300/README.md)
+Zien[README.md](./300/README.md)
 
 ## 400 - Conclusie
 
