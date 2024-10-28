@@ -2,11 +2,11 @@
 
 # Flask 开放遥测
 
-> OpenTelemetry (OTel) 是一个开源、供应商中立的可观测性框架，旨在与任何后端系统配合使用。它提供标准化的 API、库和工具来收集遥测数据，例如指标、日志和跟踪。本演讲旨在为在 Flask 中使用 OpenTelemetry 提供一个起点。
+> OpenTelemetry (OTel) is an open-source, vendor-neutral observability framework designed to work with any backend system. It provides standardized APIs, libraries, and tools to collect telemetry data, such as metrics, logs, and traces. This talk is intended to provide a starting point for working with OpenTelemetry in Flask.
 
 [参考](./REFERENCES.md)
 
-**Executive Summary**
+**执行摘要**
 
 后[安装](./300/100/README.md)，运行它：
 
@@ -38,13 +38,13 @@
     opentelemetry-instrument \
         flask run
 
-## 100 - Introduction
+## 100 - 简介
 
 看[README.md](./100/README.md)
 
 ## 200 - 要求
 
-看[README.md](./200/README.md)
+See [README.md](./200/README.md)
 
 ## 300 - 构建我们的应用程序
 

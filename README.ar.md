@@ -13,13 +13,13 @@
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-افتح متصفح الويب على http&#x3A;//localhost: 5000
+Open a web browser at http&#x3A;//localhost: 5000
 
 أوقف الخادم (CTRL+C) وفي نفس المحطة قم بتشغيل:
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-تليها:
+Followed by:
 
     opentelemetry-instrument \
       --traces_exporter console \

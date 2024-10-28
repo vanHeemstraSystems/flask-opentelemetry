@@ -19,7 +19,7 @@ Arrêtez le serveur (CTRL+C) et dans le même terminal exécutez :
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Followed by:
+Suivi de:
 
     opentelemetry-instrument \
       --traces_exporter console \
@@ -38,7 +38,7 @@ Vous pouvez également utiliser des variables d'environnement pour configurer l'
     opentelemetry-instrument \
         flask run
 
-## 100 - Introduction
+## 100 - Présentation
 
 Voir[README.md](./100/README.md)
 
@@ -46,7 +46,7 @@ Voir[README.md](./100/README.md)
 
 Voir[README.md](./200/README.md)
 
-## 300 - Créer notre application
+## 300 - Construire notre application
 
 Voir[README.md](./300/README.md)
 
