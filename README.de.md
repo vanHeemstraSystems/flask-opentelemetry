@@ -30,7 +30,7 @@ Anschließend starten Sie die Anwendung über den Agenten (siehe Referenz) und f
       --service_name todo \
       flask run -p 5000 | tee output.log
 
-Alternativ können Sie Umgebungsvariablen verwenden, um den Agenten zu konfigurieren:
+Alternatively, you can use environment variables to configure the agent:
 
     OTEL_SERVICE_NAME=todo \
     OTEL_TRACES_EXPORTER=console \
@@ -59,6 +59,9 @@ Wenn der Collector nicht läuft, erhalten Sie Folgendes:
 
 Mit diesem Setup erhalten wir zusätzlich zum offenen Telemetriekollektor auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)unterlaufen<http://0.0.0.0:16686/>Dies hilft bei der Visualisierung der Anrufe.
 
+Client und Server senden Daten direkt an den OTel Collector;
+Der OTel Collector sendet die Daten dann an das entsprechende Backend, in dieser Demo Jaeger.
+
 Sie können alle URLs aus der Textprotokolldatei abrufen:
 
     $ cat output.log | grep http.url
@@ -67,7 +70,7 @@ Die gesammelten Telemetriedaten sind hilfreich, um die Menge und Latenz der Anfr
 
 ## 100 - Einführung
 
-Sehen[README.md](./100/README.md)
+See [README.md](./100/README.md)
 
 ## 200 – Anforderungen
 
