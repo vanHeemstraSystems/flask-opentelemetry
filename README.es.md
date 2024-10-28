@@ -6,7 +6,7 @@ matraz-opentelemetria
 
 [Referencias](./REFERENCES.md)
 
-**Executive Summary**
+**Resumen ejecutivo**
 
 Después[instalación](./300/100/README.md), ejecútelo con:
 
@@ -15,7 +15,7 @@ Después[instalación](./300/100/README.md), ejecútelo con:
 
 Abra un navegador web en http&#x3A;//localhost:5000
 
-Verás un`To-Do List`aplicación. Puede agregar o eliminar tareas.
+Verás un`To-Do List` app. You can add or delete tasks.
 
 Detenga el servidor (CTRL+C) y en la misma terminal ejecute:
 
@@ -188,7 +188,7 @@ El recopilador OpenTelemetry (OTel) se ejecuta en el puerto 4317, por lo que cua
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
 
-If the OTel Collector is not running you get:
+Si OTel Collector no se está ejecutando, obtendrá:
 
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused

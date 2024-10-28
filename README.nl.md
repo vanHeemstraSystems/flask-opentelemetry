@@ -193,7 +193,7 @@ Als de OTel Collector niet actief is, krijgt u:
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Met deze opstelling krijgen we, naast de OTel Collector, ook[Jaeger-gebruikersinterface](https://github.com/jaegertracing/jaeger-ui)onder lopen<http://0.0.0.0:16686/>wat zal helpen bij het visualiseren van de oproepen. Alternatieve gebruikersinterfaces die worden ondersteund, zijn dat wel`Prometheus`En`ZipKin`.
+Met deze opstelling krijgen we, naast de OTel Collector, ook[Jaeger-gebruikersinterface](https://github.com/jaegertracing/jaeger-ui)onderdoor rennen<http://0.0.0.0:16686/>wat zal helpen bij het visualiseren van de oproepen. Alternatieve gebruikersinterfaces die worden ondersteund, zijn dat wel`Prometheus`En`ZipKin`.
 
 De client en server sturen gegevens rechtstreeks naar de OTel Collector; De OTel Collector stuurt de gegevens vervolgens in deze demo naar de juiste backend`Jaeger`.
 
@@ -201,7 +201,7 @@ U kunt elke URL uit het tekstlogbestand grep:
 
     $ cat output.log | grep http.host
 
-You will see an output like:
+Je zult een uitvoer zien zoals:
 
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",

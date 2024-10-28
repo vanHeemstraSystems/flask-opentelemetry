@@ -43,11 +43,11 @@
     opentelemetry-instrument \
         flask run -p 5000 | tee output.log
 
-開啟 Web 瀏覽器 http&#x3A;//localhost:5000
+Open a web browser at http&#x3A;//localhost:5000
 
 你會看到同樣的`To-Do List`應用程式.您可以新增或刪除任務。
 
-在終端機中，您將看到類似的輸出：
+In the terminal, you will see output alike:
 
      * Debug mode: off
     WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
@@ -193,7 +193,7 @@ OpenTelemetry (OTel) 收集器在連接埠 4317 上運行，因此除超時/連�
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-透過此設置，除了 OTel Collector 之外，我們還可以獲得[耶格使用者介面](https://github.com/jaegertracing/jaeger-ui)運行在<http://0.0.0.0:16686/>這將有助於可視化通話。支援的替代 UI 有`Prometheus`和`ZipKin`.
+With this setup, in addition to the OTel Collector, we also get [耶格使用者介面](https://github.com/jaegertracing/jaeger-ui)運行在<http://0.0.0.0:16686/>這將有助於可視化通話。支援的替代 UI 有`Prometheus`和`ZipKin`.
 
 客戶端和伺服器直接向OTel Collector發送資料；然後，OTel Collector 將資料傳送到適當的後端，在此示範中`Jaeger`.
 
@@ -224,7 +224,7 @@ OpenTelemetry (OTel) 收集器在連接埠 4317 上運行，因此除超時/連�
 
 ## 300 - 建立我們的應用程式
 
-看[README.md](./300/README.md)
+See [README.md](./300/README.md)
 
 ## 400 - 結論
 
