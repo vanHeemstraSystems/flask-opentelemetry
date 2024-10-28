@@ -46,7 +46,7 @@ Alternativamente, puede utilizar variables de entorno para configurar el agente:
 
 Abra un navegador web en http&#x3A;//localhost:5000
 
-Verás lo mismo`To-Do List`aplicación. Puede agregar o eliminar tareas.
+Verás lo mismo`To-Do List` app. You can add or delete tasks.
 
 En la terminal, verá un resultado similar:
 
@@ -194,7 +194,7 @@ Si OTel Collector no se está ejecutando, obtendrá:
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Con esta configuración, además del OTel Collector, también obtenemos[Interfaz de usuario de Jaeger](https://github.com/jaegertracing/jaeger-ui)corriendo bajo<http://0.0.0.0:16686/>lo que ayudará a visualizar las llamadas. Las UI alternativas que son compatibles son`Prometheus`y`ZipKin`.
+Con esta configuración, además del OTel Collector, también obtenemos[Interfaz de usuario de Jaeger](https://github.com/jaegertracing/jaeger-ui) running under <http://0.0.0.0:16686/>lo que ayudará a visualizar las llamadas. Las UI alternativas que son compatibles son`Prometheus`y`ZipKin`.
 
 El cliente y el servidor envían datos directamente al OTel Collector; Luego, OTel Collector envía los datos al backend apropiado, en esta demostración`Jaeger`.
 
@@ -211,7 +211,7 @@ Verá un resultado como:
 
 La telemetría recopilada es útil para comprender la cantidad y la latencia de las solicitudes a lo largo del tiempo.
 
-Filtremos en Jaeger UI (<http://0.0.0.0:16686/>) para una de las URL que utilizan la etiqueta`== url goes here ==`.
+Let’s filter in Jaeger UI (<http://0.0.0.0:16686/>) para una de las URL que utilizan la etiqueta`== url goes here ==`.
 
 MÁS
 
