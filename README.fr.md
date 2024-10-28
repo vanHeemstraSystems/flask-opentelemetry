@@ -1,6 +1,6 @@
 télémétrie à ouverture de flacon
 
-# Flacon OpenTelemetry
+# Flask OpenTelemetry
 
 > OpenTelemetry (OTel) est un framework d'observabilité open source et indépendant du fournisseur, conçu pour fonctionner avec n'importe quel système backend. Il fournit des API, des bibliothèques et des outils standardisés pour collecter des données de télémétrie, telles que des métriques, des journaux et des traces. Cette présentation est destinée à fournir un point de départ pour travailler avec OpenTelemetry dans Flask.
 
@@ -229,4 +229,4 @@ Voir[README.md](./300/README.md)
 
 ## 400 - Conclusion
 
-Voir[README.md](./400/README.md)
+See [README.md](./400/README.md)
