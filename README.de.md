@@ -193,7 +193,7 @@ Wenn der OTel Collector nicht läuft, erhalten Sie:
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Mit diesem Setup erhalten wir zusätzlich zum OTel Collector auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)unterlaufen<http://0.0.0.0:16686/>Dies hilft bei der Visualisierung der Anrufe. Folgende alternative Benutzeroberflächen werden unterstützt:`Prometheus`Und`ZipKin`.
+Mit diesem Setup erhalten wir zusätzlich zum OTel Collector auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui) running under <http://0.0.0.0:16686/>Dies hilft bei der Visualisierung der Anrufe. Folgende alternative Benutzeroberflächen werden unterstützt:`Prometheus`Und`ZipKin`.
 
 Client und Server senden Daten direkt an den OTel Collector; In dieser Demo sendet der OTel Collector die Daten dann an das entsprechende Backend`Jaeger`.
 
@@ -214,9 +214,9 @@ Lassen Sie uns in der Jaeger-Benutzeroberfläche filtern (<http://0.0.0.0:16686/
 
 MEHR
 
-## 100 - Introduction
+## 100 - Einführung
 
-See [README.md](./100/README.md)
+Sehen[README.md](./100/README.md)
 
 ## 200 - Requirements
 
