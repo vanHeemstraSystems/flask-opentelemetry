@@ -2,7 +2,7 @@ kolf-opentelemetrie
 
 # Kolf OpenTelemetrie
 
-> OpenTelemetry (OTel) is an open-source, vendor-neutral observability framework designed to work with any backend system. It provides standardized APIs, libraries, and tools to collect telemetry data, such as metrics, logs, and traces. This talk is intended to provide a starting point for working with OpenTelemetry in Flask.
+> OpenTelemetry (OTel) is een open-source, leveranciersneutraal observatieframework dat is ontworpen om met elk backend-systeem te werken. Het biedt gestandaardiseerde API's, bibliotheken en hulpmiddelen voor het verzamelen van telemetriegegevens, zoals statistieken, logboeken en sporen. Deze lezing is bedoeld om een ​​startpunt te bieden voor het werken met OpenTelemetry in Flask.
 
 [Referenties](./REFERENCES.md)
 
@@ -13,7 +13,7 @@ Na[installatie](./300/100/README.md), voer het uit met:
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-Open a web browser at http&#x3A;//localhost:5000
+Open een webbrowser op http&#x3A;//localhost:5000
 
 Je ziet een`To-Do List`app. U kunt taken toevoegen of verwijderen.
 
@@ -42,7 +42,7 @@ Als alternatief kunt u omgevingsvariabelen gebruiken om de agent te configureren
 
 Open een webbrowser op http&#x3A;//localhost:5000
 
-Je zult hetzelfde zien`To-Do List`app. U kunt taken toevoegen of verwijderen.
+You will see the same `To-Do List`app. U kunt taken toevoegen of verwijderen.
 
 Maar op poort 4317 luistert de OpenTelemetry-server.
 

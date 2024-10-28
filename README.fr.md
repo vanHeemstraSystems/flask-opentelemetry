@@ -8,7 +8,7 @@ télémétrie à ouverture de flacon
 
 **Résumé exécutif**
 
-Après[installation](./300/100/README.md), exécutez-le avec :
+After [installation](./300/100/README.md), exécutez-le avec :
 
     $ cd flask_opentelemetry/src/example
     $ flask run

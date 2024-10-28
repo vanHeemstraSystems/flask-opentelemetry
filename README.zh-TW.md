@@ -8,7 +8,7 @@
 
 **執行摘要**
 
-後[安裝](./300/100/README.md), run it with:
+後[安裝](./300/100/README.md)，運行它：
 
     $ cd flask_opentelemetry/src/example
     $ flask run
@@ -30,7 +30,7 @@
       --service_name todo \
       flask run -p 5000
 
-Alternatively, you can use environment variables to configure the agent:
+或者，您可以使用環境變數來配置代理：
 
     OTEL_SERVICE_NAME=todo \
     OTEL_TRACES_EXPORTER=console \
@@ -48,7 +48,7 @@ Alternatively, you can use environment variables to configure the agent:
 
 ## 100 - 簡介
 
-See [README.md](./100/README.md)
+看[README.md](./100/README.md)
 
 ## 200 - 要求
 

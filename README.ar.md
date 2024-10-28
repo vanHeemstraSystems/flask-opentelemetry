@@ -13,7 +13,7 @@
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-Open a web browser at http&#x3A;//localhost:5000
+افتح متصفح الويب على http&#x3A;//localhost:5000
 
 سوف ترى أ`To-Do List`برنامج. يمكنك إضافة أو حذف المهام.
 
@@ -42,7 +42,7 @@ Open a web browser at http&#x3A;//localhost:5000
 
 افتح متصفح الويب على http&#x3A;//localhost:5000
 
-سوف ترى نفس الشيء`To-Do List` app. You can add or delete tasks.
+سوف ترى نفس الشيء`To-Do List`برنامج. يمكنك إضافة أو حذف المهام.
 
 ولكن على المنفذ 4317، يستمع خادم OpenTelemetry.
 
