@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template_string, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from opentelemetry import trace
+from opentelemetry import trace, metrics
 from sqlalchemy.orm import Mapped, mapped_column
 import logging
 
@@ -17,6 +17,17 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy()
 
 tracer = trace.get_tracer("task.tracer")
+meter = metrics.get_meter("task.meter")
+
+request_counter = meter.create_counter(
+    "flask_app_requests_total",
+    description="Total number of requests",
+)
+
+task_counter = meter.create_counter(
+    "flask_app_tasks_total",
+    description="Total number of tasks created",
+)
 
 # Define a database model named Task for storing task data
 class Task(db.Model):
@@ -109,6 +120,7 @@ HOME_HTML = """
 def home():
     with tracer.start_as_current_span("querying_tasks"):
         tasks = Task.query.all()  # Retrieve all tasks from the database
+        request_counter.add(1, {"endpoint": "home"})
         logging.info(f'Fetched {len(tasks)} tasks from the database')
     return render_template_string(
         HOME_HTML, tasks=tasks
@@ -122,6 +134,8 @@ def add():
     with tracer.start_as_current_span("adding_task"):
         db.session.add(new_task)  # Add new task to database session
         db.session.commit()  # Commit changes to the database
+        task_counter.add(1)
+        request_counter.add(1, {"endpoint": "add"})        
         logging.info(f'Added new task with description: {task_description}')    
     return redirect(url_for("home"))  # Redirect to the home page
 
@@ -135,7 +149,8 @@ def delete(task_id: int):
             db.session.commit()  # Commit the change to the database
             logging.info(f'Deleted task with ID: {task_id}')
         else:
-            logging.warning(f'Attempted to delete a task with ID: {task_id}, but it was not found')        
+            logging.warning(f'Attempted to delete a task with ID: {task_id}, but it was not found')  
+        request_counter.add(1, {"endpoint": "delete"})          
     return redirect(url_for("home"))  # Redirect to the home page
 
 # Check if the script is the main program and run the app
