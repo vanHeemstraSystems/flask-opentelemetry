@@ -6,7 +6,7 @@ télémétrie à ouverture de flacon
 
 [Références](./REFERENCES.md)
 
-**Résumé exécutif**
+**Executive Summary**
 
 Après[installation](./300/100/README.md), exécutez-le avec :
 
@@ -15,11 +15,11 @@ Après[installation](./300/100/README.md), exécutez-le avec :
 
 Ouvrez un navigateur Web sur http&#x3A;//localhost : 5000
 
-Dans une fenêtre de terminal séparée, exécutez :
+Arrêtez le serveur (CTRL+C) et dans le même terminal exécutez :
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Suivi de:
+Followed by:
 
     opentelemetry-instrument \
       --traces_exporter console \
@@ -28,7 +28,17 @@ Suivi de:
       --service_name todo \
       flask run -p 8080
 
-## 100 - Présentation
+Vous pouvez également utiliser des variables d'environnement pour configurer l'agent :
+
+    OTEL_SERVICE_NAME=todo \
+    OTEL_TRACES_EXPORTER=console \
+    OTEL_METRICS_EXPORTER=console \
+    OTEL_LOG_EXPORTER=console
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+    opentelemetry-instrument \
+        flask run
+
+## 100 - Introduction
 
 Voir[README.md](./100/README.md)
 
@@ -36,7 +46,7 @@ Voir[README.md](./100/README.md)
 
 Voir[README.md](./200/README.md)
 
-## 300 - Construire notre application
+## 300 - Créer notre application
 
 Voir[README.md](./300/README.md)
 
