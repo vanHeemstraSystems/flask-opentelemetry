@@ -59,6 +59,9 @@ Als de collector niet actief is, krijgt u:
 
 Met deze opstelling krijgen we, naast de open telemetriecollector, ook[Jaeger-gebruikersinterface](https://github.com/jaegertracing/jaeger-ui)onder lopen<http://0.0.0.0:16686/>wat zal helpen bij het visualiseren van de oproepen.
 
+De client en server sturen gegevens rechtstreeks naar de OTel Collector;
+De OTel Collector stuurt de gegevens vervolgens naar de juiste backend, in deze demo van Jaeger.
+
 U kunt elke URL uit het tekstlogbestand grep:
 
     $ cat output.log | grep http.url
