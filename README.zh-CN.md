@@ -59,7 +59,10 @@
 
 通过此设置，除了开放遥测收集器之外，我们还获得[耶格用户界面](https://github.com/jaegertracing/jaeger-ui)运行在<http://0.0.0.0:16686/>这将有助于可视化通话。
 
-您可以从文本日志文件中 grep 任何 url：
+客户端和服务器直接向OTel Collector发送数据；
+然后，OTel Collector 将数据发送到适当的后端，在此演示中为 Jaeger。
+
+You can grep any urls from the text logfile:
 
     $ cat output.log | grep http.url
 
