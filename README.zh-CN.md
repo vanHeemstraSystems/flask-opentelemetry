@@ -1,6 +1,6 @@
 烧瓶开孔遥测
 
-# Flask OpenTelemetry
+# Flask 开放遥测
 
 > 斯拉格莱恩
 
@@ -24,4 +24,4 @@
 
 ## 400 - 结论
 
-看[README.md](./400/README.md)
+See [README.md](./400/README.md)
