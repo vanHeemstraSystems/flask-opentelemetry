@@ -8,7 +8,7 @@ kolf-opentelemetrie
 
 **Samenvatting**
 
-Tekst
+Text
 
 ## 100 - Inleiding
 
