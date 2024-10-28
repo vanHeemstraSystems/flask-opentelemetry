@@ -13,7 +13,7 @@
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-Open a web browser at http&#x3A;//localhost:5000
+開啟 Web 瀏覽器 http&#x3A;//localhost:5000
 
 你會看到一個`To-Do List`應用程式.您可以新增或刪除任務。
 
@@ -188,14 +188,14 @@ OpenTelemetry (OTel) 收集器在連接埠 4317 上運行，因此除超時/連�
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
 
-如果收集器沒有運行，您會得到：
+如果 OTel Collector 未運行，您將獲得：
 
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-透過此設置，除了開放遙測收集器之外，我們還獲得[耶格使用者介面](https://github.com/jaegertracing/jaeger-ui)運行在<http://0.0.0.0:16686/>這將有助於可視化通話。支援的替代 UI 有`Prometheus`和`ZipKin`.
+透過此設置，除了 OTel Collector 之外，我們還可以獲得[耶格使用者介面](https://github.com/jaegertracing/jaeger-ui)運行在<http://0.0.0.0:16686/>這將有助於可視化通話。支援的替代 UI 有`Prometheus` and `ZipKin`.
 
-客戶端和伺服器直接向OTel Collector發送資料；然後，OTel Collector 將資料傳送到適當的後端，在此示範中為 Jaeger。
+客戶端和伺服器直接向OTel Collector發送資料；然後，OTel Collector 將資料傳送到適當的後端，在此示範中`Jaeger`.
 
 您可以從文字日誌檔案中 grep 任何 url：
 

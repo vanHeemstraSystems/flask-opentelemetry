@@ -8,7 +8,7 @@
 
 **ملخص تنفيذي**
 
-بعد[تثبيت](./300/100/README.md), run it with:
+بعد[تثبيت](./300/100/README.md)، قم بتشغيله باستخدام:
 
     $ cd flask_opentelemetry/src/example
     $ flask run
@@ -188,14 +188,14 @@
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
 
-إذا لم يكن المجمع قيد التشغيل، فستحصل على:
+إذا لم يكن مجمع OTel قيد التشغيل، فستحصل على:
 
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-مع هذا الإعداد، بالإضافة إلى جامع القياس عن بعد المفتوح، نحصل أيضًا على[واجهة المستخدم جايجر](https://github.com/jaegertracing/jaeger-ui)يركض تحت<http://0.0.0.0:16686/>والتي سوف تساعد في تصور المكالمات. واجهات المستخدم البديلة المدعومة هي`Prometheus`و`ZipKin`.
+مع هذا الإعداد، بالإضافة إلى OTel Collector، نحصل أيضًا على[واجهة المستخدم جايجر](https://github.com/jaegertracing/jaeger-ui)يركض تحت<http://0.0.0.0:16686/>والتي سوف تساعد في تصور المكالمات. واجهات المستخدم البديلة المدعومة هي`Prometheus`و`ZipKin`.
 
-يرسل العميل والخادم البيانات مباشرة إلى OTel Collector؛ يقوم جامع OTel بعد ذلك بإرسال البيانات إلى الواجهة الخلفية المناسبة، في هذا العرض التوضيحي لـ Jaeger.
+يرسل العميل والخادم البيانات مباشرة إلى OTel Collector؛ يقوم جامع OTel بعد ذلك بإرسال البيانات إلى الواجهة الخلفية المناسبة، في هذا العرض التوضيحي`Jaeger`.
 
 يمكنك الحصول على أي عناوين URL من ملف السجل النصي:
 

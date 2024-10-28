@@ -188,14 +188,14 @@ Der OpenTelemetry (OTel)-Kollektor läuft auf Port 4317, sodass jede andere Fehl
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
 
-Wenn der Collector nicht läuft, erhalten Sie Folgendes:
+Wenn der OTel Collector nicht läuft, erhalten Sie:
 
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Mit diesem Setup erhalten wir zusätzlich zum offenen Telemetriekollektor auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)unterlaufen<http://0.0.0.0:16686/>Dies hilft bei der Visualisierung der Anrufe. Folgende alternative Benutzeroberflächen werden unterstützt:`Prometheus`Und`ZipKin`.
+Mit diesem Setup erhalten wir zusätzlich zum OTel Collector auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)unterlaufen<http://0.0.0.0:16686/>Dies hilft bei der Visualisierung der Anrufe. Folgende alternative Benutzeroberflächen werden unterstützt:`Prometheus`Und`ZipKin`.
 
-Client und Server senden Daten direkt an den OTel Collector; Der OTel Collector sendet die Daten dann an das entsprechende Backend, in dieser Demo Jaeger.
+Client und Server senden Daten direkt an den OTel Collector; In dieser Demo sendet der OTel Collector die Daten dann an das entsprechende Backend`Jaeger`.
 
 Sie können alle URLs aus der Textprotokolldatei abrufen:
 
@@ -214,11 +214,11 @@ Lassen Sie uns in der Jaeger-Benutzeroberfläche filtern (<http://0.0.0.0:16686/
 
 MEHR
 
-## 100 - Einführung
+## 100 - Introduction
 
-Sehen[README.md](./100/README.md)
+See [README.md](./100/README.md)
 
-## 200 – Anforderungen
+## 200 - Requirements
 
 Sehen[README.md](./200/README.md)
 
