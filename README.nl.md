@@ -1,4 +1,4 @@
-kolf-opentelemetrie
+flask-opentelemetry
 
 # Kolf OpenTelemetrie
 
@@ -8,7 +8,7 @@ kolf-opentelemetrie
 
 **Samenvatting**
 
-Text
+Tekst
 
 ## 100 - Inleiding
 
