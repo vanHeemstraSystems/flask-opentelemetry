@@ -193,7 +193,7 @@ Wenn der Collector nicht läuft, erhalten Sie Folgendes:
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Mit diesem Setup erhalten wir zusätzlich zum offenen Telemetriekollektor auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)unterlaufen<http://0.0.0.0:16686/>Dies hilft bei der Visualisierung der Anrufe.
+Mit diesem Setup erhalten wir zusätzlich zum offenen Telemetriekollektor auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)unterlaufen<http://0.0.0.0:16686/>Dies hilft bei der Visualisierung der Anrufe. Folgende alternative Benutzeroberflächen werden unterstützt:`Prometheus`Und`ZipKin`.
 
 Client und Server senden Daten direkt an den OTel Collector; Der OTel Collector sendet die Daten dann an das entsprechende Backend, in dieser Demo Jaeger.
 
@@ -210,7 +210,7 @@ Sie sehen eine Ausgabe wie:
 
 Die gesammelten Telemetriedaten sind hilfreich, um die Menge und Latenz der Anfragen im Zeitverlauf zu verstehen.
 
-Let’s filter in Jaeger UI (<http://0.0.0.0:16686/>) für eine der URLs, die das Tag verwenden`== url goes here ==`.
+Lassen Sie uns in der Jaeger-Benutzeroberfläche filtern (<http://0.0.0.0:16686/>) für eine der URLs, die das Tag verwenden`== url goes here ==`.
 
 MEHR
 
