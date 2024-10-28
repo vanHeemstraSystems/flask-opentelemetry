@@ -10,7 +10,10 @@ Kolben-Open-Telemetrie
 
 Nach[Installation](./300/100/README.md), führe es aus mit:
 
-MEHR
+    $ cd flask_opentelemetry/src/example
+    $ flask run
+
+Öffnen Sie einen Webbrowser unter http&#x3A;//localhost:5000
 
 ## 100 - Einführung
 
