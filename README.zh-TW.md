@@ -47,7 +47,7 @@
 
 但在連接埠 4317 上，OpenTelemetry 伺服器正在偵聽。
 
-收集器在連接埠 4317 上運行，因此除逾時/連接錯誤之外的任何其他錯誤訊息（例如`Transient error StatusCode.UNAVAILABLE encountered while exporting traces to localhost:4317, retrying in 2s.`), means that the application is running:
+收集器在連接埠 4317 上運行，因此除逾時/連接錯誤之外的任何其他錯誤訊息（例如`Transient error StatusCode.UNAVAILABLE encountered while exporting traces to localhost:4317, retrying in 2s.`)，表示應用程式正在運行：
 
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
@@ -58,6 +58,9 @@
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
 透過此設置，除了開放遙測收集器之外，我們還獲得[耶格使用者介面](https://github.com/jaegertracing/jaeger-ui)運行在<http://0.0.0.0:16686/>這將有助於可視化通話。
+
+客戶端和伺服器直接向OTel Collector發送資料；
+然後，OTel Collector 將資料傳送到適當的後端，在此示範中為 Jaeger。
 
 您可以從文字日誌檔案中 grep 任何 url：
 
@@ -73,7 +76,7 @@
 
 看[README.md](./200/README.md)
 
-## 300 - Building Our Application
+## 300 - 建立我們的應用程式
 
 看[README.md](./300/README.md)
 
