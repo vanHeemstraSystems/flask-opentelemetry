@@ -4,7 +4,8 @@
 
 > OpenTelemetry (OTel) 是一个开源、供应商中立的可观测性框架，旨在与任何后端系统配合使用。它提供标准化的 API、库和工具来收集遥测数据，例如指标、日志和跟踪。本演讲旨在为在 Flask 中使用 OpenTelemetry 提供一个起点。
 
-[参考](./REFERENCES.md)
+-   [词汇表](./GLOSSARY.md)
+-   [参考](./REFERENCES.md)
 
 **执行摘要**
 
@@ -210,11 +211,11 @@ OpenTelemetry (OTel) 收集器在端口 4317 上运行，因此除超时/连接�
 
 收集的遥测数据有助于了解一段时间内请求的数量和延迟。
 
-让我们在 Jaeger UI 中进行过滤（<http://0.0.0.0:16686/>) 对于使用标签的 URL 之一`== url goes here ==`.
+让我们在 Jaeger UI 中进行过滤（<http://0.0.0.0:16686/>) for one of the URLs using the tag `== url goes here ==`.
 
 更多的
 
-## 100 - 简介
+## 100 - Introduction
 
 看[README.md](./100/README.md)
 

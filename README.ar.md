@@ -2,9 +2,10 @@
 
 # قارورة القياس عن بعد المفتوحة
 
-> OpenTelemetry (OTel) is an open-source, vendor-neutral observability framework designed to work with any backend system. It provides standardized APIs, libraries, and tools to collect telemetry data, such as metrics, logs, and traces. This talk is intended to provide a starting point for working with OpenTelemetry in Flask.
+> OpenTelemetry (OTel) هو إطار عمل مفتوح المصدر وقابل للمراقبة محايد للبائع مصمم للعمل مع أي نظام خلفي. وهو يوفر واجهات برمجة التطبيقات والمكتبات والأدوات القياسية لجمع بيانات القياس عن بعد، مثل المقاييس والسجلات والتتبعات. تهدف هذه المحادثة إلى توفير نقطة بداية للعمل مع OpenTelemetry في Flask.
 
-[مراجع](./REFERENCES.md)
+-   [مسرد](./GLOSSARY.md)
+-   [مراجع](./REFERENCES.md)
 
 **ملخص تنفيذي**
 
@@ -210,7 +211,7 @@
 
 يعد القياس عن بعد الذي تم جمعه مفيدًا لفهم مقدار الطلبات ووقت الاستجابة لها بمرور الوقت.
 
-دعونا نقوم بالتصفية في Jaeger UI (<http://0.0.0.0:16686/>) for one of the URLs using the tag `== url goes here ==`.
+دعونا نقوم بالتصفية في Jaeger UI (<http://0.0.0.0:16686/>) لأحد عناوين URL التي تستخدم العلامة`== url goes here ==`.
 
 أكثر
 
