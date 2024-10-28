@@ -8,7 +8,7 @@
 
 **कार्यकारी सारांश**
 
-Text
+मूलपाठ
 
 ## 100 - परिचय
 
@@ -16,9 +16,9 @@ Text
 
 ## 200 - आवश्यकताएँ
 
-See [README.md](./200/README.md)
+देखना[README.md](./200/README.md)
 
-## 300 - Building Our Application
+## 300 - हमारे एप्लिकेशन का निर्माण
 
 देखना[README.md](./300/README.md)
 
