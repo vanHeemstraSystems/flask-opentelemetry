@@ -8,14 +8,14 @@
 
 **執行摘要**
 
-後[安裝](./300/100/README.md)，運行它：
+After [安裝](./300/100/README.md)，運行它：
 
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-開啟 Web 瀏覽器 http&#x3A;//localhost:5000
+Open a web browser at http&#x3A;//localhost: 5000
 
-在單獨的終端機視窗中運行：
+停止伺服器 (CTRL+C) 並在同一終端機中運作：
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
@@ -28,6 +28,16 @@
       --service_name todo \
       flask run -p 8080
 
+或者，您可以使用環境變數來配置代理：
+
+    OTEL_SERVICE_NAME=todo \
+    OTEL_TRACES_EXPORTER=console \
+    OTEL_METRICS_EXPORTER=console \
+    OTEL_LOG_EXPORTER=console
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+    opentelemetry-instrument \
+        flask run
+
 ## 100 - 簡介
 
 看[README.md](./100/README.md)
@@ -36,10 +46,10 @@
 
 看[README.md](./200/README.md)
 
-## 300 - 建立我們的應用程式
+## 300 - Building Our Application
 
 看[README.md](./300/README.md)
 
-## 400 - 結論
+## 400 - Conclusion
 
 看[README.md](./400/README.md)
