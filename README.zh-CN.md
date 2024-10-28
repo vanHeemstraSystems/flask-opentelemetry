@@ -21,7 +21,7 @@
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-接下来通过代理启动应用程序（请参阅参考资料）并保留文本日志文件：
+接下来通过代理启动应用程序（请参阅[参考](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)）并保留文本日志文件：
 
     opentelemetry-instrument \
       --traces_exporter console \
