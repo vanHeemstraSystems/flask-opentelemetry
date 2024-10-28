@@ -15,6 +15,19 @@
 
 開啟 Web 瀏覽器 http&#x3A;//localhost:5000
 
+在單獨的終端機視窗中運行：
+
+    $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+
+其次是：
+
+    opentelemetry-instrument \
+      --traces_exporter console \
+      --metrics_exporter console \
+      --logs_exporter console \
+      --service_name todo \
+      flask run -p 8080
+
 ## 100 - 簡介
 
 看[README.md](./100/README.md)
