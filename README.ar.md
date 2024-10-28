@@ -21,7 +21,7 @@
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-يلي ذلك بدء التطبيق عبر الوكيل (انظر المرجع) والاحتفاظ بملف سجل نصي:
+يليه بدء التطبيق عبر الوكيل (انظر[مرجع](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) واحتفظ بملف سجل نصي:
 
     opentelemetry-instrument \
       --traces_exporter console \
