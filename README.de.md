@@ -8,7 +8,9 @@ Kolben-Open-Telemetrie
 
 **Zusammenfassung**
 
-Text
+Nach[Installation](./300/100/README.md), führe es aus mit:
+
+MEHR
 
 ## 100 - Einführung
 
