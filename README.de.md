@@ -183,7 +183,7 @@ Im Terminal sehen Sie die gleiche Ausgabe:
         }
     }
 
-Der OpenTelemetry (OTel)-Kollektor läuft auf Port 4317, sodass jede andere Fehlermeldung als ein Timeout/Verbindungsfehler (z. B.`Transient error StatusCode.UNAVAILABLE encountered while exporting traces to localhost:4317, retrying in 2s.`), means that the application is running:
+Der OpenTelemetry (OTel)-Kollektor läuft auf Port 4317, sodass jede andere Fehlermeldung als ein Timeout/Verbindungsfehler (z. B.`Transient error StatusCode.UNAVAILABLE encountered while exporting traces to localhost:4317, retrying in 2s.`), bedeutet, dass die Anwendung ausgeführt wird:
 
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
