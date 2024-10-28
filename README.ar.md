@@ -1,8 +1,8 @@
-flask-opentelemetry
+قارورة مفتوحة القياس
 
 # قارورة القياس عن بعد المفتوحة
 
-> سلوجلاين
+> OpenTelemetry (OTel) is an open-source, vendor-neutral observability framework designed to work with any backend system. It provides standardized APIs, libraries, and tools to collect telemetry data, such as metrics, logs, and traces. This talk is intended to provide a starting point for working with OpenTelemetry in Flask.
 
 [مراجع](./REFERENCES.md)
 
