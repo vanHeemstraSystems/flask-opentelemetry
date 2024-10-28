@@ -2,11 +2,11 @@
 
 # 存储库名称
 
-> Slugline
+> 斯拉格莱恩
 
 [参考](./REFERENCES.md)
 
-**Executive Summary**
+**执行摘要**
 
 文本
 
@@ -20,7 +20,7 @@
 
 ## 300 - 构建我们的应用程序
 
-See [README.md](./300/README.md)
+看[README.md](./300/README.md)
 
 ## 400 - 结论
 
