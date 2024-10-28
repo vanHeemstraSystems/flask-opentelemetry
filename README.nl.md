@@ -1,4 +1,4 @@
-flask-opentelemetry
+kolf-opentelemetrie
 
 # Kolf OpenTelemetrie
 
