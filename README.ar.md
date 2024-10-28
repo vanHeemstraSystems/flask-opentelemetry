@@ -10,7 +10,10 @@
 
 بعد[تثبيت](./300/100/README.md)، قم بتشغيله باستخدام:
 
-أكثر
+    $ cd flask_opentelemetry/src/example
+    $ flask run
+
+افتح متصفح الويب على http&#x3A;//localhost: 5000
 
 ## 100- مقدمة
 
@@ -18,7 +21,7 @@
 
 ## 200 - المتطلبات
 
-يرى[README.md](./200/README.md)
+See [README.md](./200/README.md)
 
 ## 300 – بناء تطبيقنا
 
