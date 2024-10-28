@@ -13,30 +13,38 @@
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-Open a web browser at http&#x3A;//localhost: 5000
+افتح متصفح الويب على http&#x3A;//localhost:5000
+
+سوف ترى أ`To-Do List`برنامج. يمكنك إضافة أو حذف المهام.
 
 أوقف الخادم (CTRL+C) وفي نفس المحطة قم بتشغيل:
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Followed by:
+تليها:
 
     opentelemetry-instrument \
-      --traces_exporter console \
+      --traces_exporter console, otlp \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
-      flask run -p 8080
+      flask run -p 5000
 
 وبدلاً من ذلك، يمكنك استخدام متغيرات البيئة لتكوين الوكيل:
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console \
+    OTEL_TRACES_EXPORTER=console, otlp \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
-    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
     opentelemetry-instrument \
-        flask run
+        flask run -p 5000
+
+افتح متصفح الويب على http&#x3A;//localhost:5000
+
+سوف ترى نفس الشيء`To-Do List`برنامج. يمكنك إضافة أو حذف المهام.
+
+ولكن على المنفذ 4317 ...
 
 ## 100- مقدمة
 
