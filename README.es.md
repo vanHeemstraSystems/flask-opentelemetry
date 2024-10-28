@@ -24,7 +24,7 @@ Detenga el servidor (CTRL+C) y en la misma terminal ejecute:
 Seguido por:
 
     opentelemetry-instrument \
-      --traces_exporter console, otlp \
+      --traces_exporter console \
       --metrics_exporter console \
       --logs_exporter console \
       --service_name todo \
@@ -33,7 +33,7 @@ Seguido por:
 Alternativamente, puede utilizar variables de entorno para configurar el agente:
 
     OTEL_SERVICE_NAME=todo \
-    OTEL_TRACES_EXPORTER=console, otlp \
+    OTEL_TRACES_EXPORTER=console \
     OTEL_METRICS_EXPORTER=console \
     OTEL_LOG_EXPORTER=console
     OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:4317
@@ -44,7 +44,7 @@ Abra un navegador web en http&#x3A;//localhost:5000
 
 Verás lo mismo`To-Do List`aplicación. Puede agregar o eliminar tareas.
 
-Pero en el puerto 4317...
+Pero en el puerto 4317, el servidor OpenTelemetry está escuchando.
 
 ## 100 - Introducción
 
@@ -52,7 +52,7 @@ Ver[README.md](./100/README.md)
 
 ## 200 - Requisitos
 
-See [README.md](./200/README.md)
+Ver[README.md](./200/README.md)
 
 ## 300 - Construyendo nuestra aplicación
 
