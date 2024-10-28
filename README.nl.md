@@ -22,7 +22,7 @@ Stop de server (CTRL+C) en voer in dezelfde terminal uit:
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Gevolgd door het starten van de applicatie via de agent (zie[referentie](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) en houd een tekstlogbestand bij:
+Gevolgd door het starten van de applicatie via de agent (zie[reference](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) en houd een tekstlogbestand bij:
 
     opentelemetry-instrument \
       --traces_exporter console \
