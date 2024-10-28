@@ -1,4 +1,4 @@
-烧瓶开孔遥测
+flask-opentelemetry
 
 # Flask 开放遥测
 
@@ -8,13 +8,13 @@
 
 **执行摘要**
 
-后[installation](./300/100/README.md)，运行它：
+后[安装](./300/100/README.md)，运行它：
 
 更多的
 
 ## 100 - 简介
 
-看[README.md](./100/README.md)
+See [README.md](./100/README.md)
 
 ## 200 - 要求
 
