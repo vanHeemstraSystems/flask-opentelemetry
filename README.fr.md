@@ -8,17 +8,19 @@ télémétrie à ouverture de flacon
 
 **Résumé exécutif**
 
-Texte
+Après[installation](./300/100/README.md), exécutez-le avec :
+
+PLUS
 
 ## 100 - Introduction
 
 Voir[README.md](./100/README.md)
 
-## 200 - Exigences
+## 200 - Requirements
 
-Voir[README.md](./200/README.md)
+See [README.md](./200/README.md)
 
-## 300 - Construire notre application
+## 300 - Créer notre application
 
 Voir[README.md](./300/README.md)
 
