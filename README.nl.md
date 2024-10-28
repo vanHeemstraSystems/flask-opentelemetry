@@ -4,7 +4,7 @@ kolf-opentelemetrie
 
 > OpenTelemetry (OTel) is een open-source, leveranciersneutraal observatieframework dat is ontworpen om met elk backend-systeem te werken. Het biedt gestandaardiseerde API's, bibliotheken en hulpmiddelen voor het verzamelen van telemetriegegevens, zoals statistieken, logboeken en sporen. Deze lezing is bedoeld om een ​​startpunt te bieden voor het werken met OpenTelemetry in Flask.
 
--   [Glossarium](./GLOSSARY.md)
+-   [Glossary](./GLOSSARY.md)
 -   [Referenties](./REFERENCES.md)
 
 **Samenvatting**
@@ -22,7 +22,7 @@ Stop de server (CTRL+C) en voer in dezelfde terminal uit:
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-Gevolgd door het starten van de applicatie via de agent (zie[reference](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) en houd een tekstlogbestand bij:
+Gevolgd door het starten van de applicatie via de agent (zie[referentie](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)) en houd een tekstlogbestand bij:
 
     opentelemetry-instrument \
       --traces_exporter console \
@@ -194,7 +194,7 @@ Als de OTel Collector niet actief is, krijgt u:
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Met deze opstelling krijgen we, naast de OTel Collector, ook[Jaeger-gebruikersinterface](https://github.com/jaegertracing/jaeger-ui)onder lopen<http://0.0.0.0:16686/>wat zal helpen bij het visualiseren van de oproepen. Alternatieve gebruikersinterfaces die worden ondersteund, zijn dat wel`Prometheus`En`ZipKin`.
+Met deze opstelling krijgen we, naast de OTel Collector, ook[Jaeger-gebruikersinterface](https://github.com/jaegertracing/jaeger-ui)onderdoor rennen<http://0.0.0.0:16686/>wat zal helpen bij het visualiseren van de oproepen. Alternatieve gebruikersinterfaces die worden ondersteund, zijn dat wel`Prometheus`En`ZipKin`.
 
 De client en server sturen gegevens rechtstreeks naar de OTel Collector; De OTel Collector stuurt de gegevens vervolgens in deze demo naar de juiste backend`Jaeger`.
 
@@ -221,11 +221,11 @@ Zien[README.md](./100/README.md)
 
 ## 200 - Vereisten
 
-Zien[README.md](./200/README.md)
+See [README.md](./200/README.md)
 
 ## 300 - Onze applicatie bouwen
 
-Zien[README.md](./300/README.md)
+See [README.md](./300/README.md)
 
 ## 400 - Conclusie
 
