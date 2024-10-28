@@ -8,16 +8,29 @@
 
 **执行摘要**
 
-After [安装](./300/100/README.md)，运行它：
+后[安装](./300/100/README.md)，运行它：
 
     $ cd flask_opentelemetry/src/example
     $ flask run
 
 打开 Web 浏览器 http&#x3A;//localhost:5000
 
+在单独的终端窗口中运行：
+
+    $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+
+其次是：
+
+    opentelemetry-instrument \
+      --traces_exporter console \
+      --metrics_exporter console \
+      --logs_exporter console \
+      --service_name todo \
+      flask run -p 8080
+
 ## 100 - 简介
 
-See [README.md](./100/README.md)
+看[README.md](./100/README.md)
 
 ## 200 - 要求
 
