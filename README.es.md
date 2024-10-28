@@ -52,18 +52,21 @@ El recopilador se ejecuta en el puerto 4317, por lo que cualquier otro mensaje d
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
 
-Si el recopilador no se está ejecutando, obtienes:
+If the collector is not running you get:
 
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
 Con esta configuración, además del recopilador de telemetría abierto, también obtenemos[Interfaz de usuario de Jaeger](https://github.com/jaegertracing/jaeger-ui)corriendo bajo<http://0.0.0.0:16686/>lo que ayudará a visualizar las llamadas.
 
+El cliente y el servidor envían datos directamente al OTel Collector;
+Luego, OTel Collector envía los datos al backend apropiado, en esta demostración Jaeger.
+
 Puede recuperar cualquier URL del archivo de registro de texto:
 
     $ cat output.log | grep http.url
 
-La telemetría recopilada es útil para comprender la cantidad y la latencia de las solicitudes a lo largo del tiempo. Filtremos en Jaeger UI (<http://0.0.0.0:16686/>) para una de las URL que utilizan la etiqueta`url goes here`.
+La telemetría recopilada es útil para comprender la cantidad y la latencia de las solicitudes a lo largo del tiempo. Filtremos en Jaeger UI (<http://0.0.0.0:16686/>) for one of the URLs using the tag `url goes here`.
 
 ## 100 - Introducción
 
