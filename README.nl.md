@@ -8,7 +8,7 @@ kolf-opentelemetrie
 
 **Samenvatting**
 
-Na[installatie](./300/100/README.md), voer het uit met:
+Na[installatie](./300/100/README.md), run it with:
 
     $ cd flask_opentelemetry/src/example
     $ flask run
