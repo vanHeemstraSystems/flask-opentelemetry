@@ -188,14 +188,14 @@ OpenTelemetry (OTel) 收集器在端口 4317 上运行，因此除超时/连接�
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
 
-如果收集器没有运行，您会得到：
+如果 OTel Collector 未运行，您将得到：
 
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-通过此设置，除了开放遥测收集器之外，我们还获得[耶格用户界面](https://github.com/jaegertracing/jaeger-ui)运行在<http://0.0.0.0:16686/>这将有助于可视化通话。支持的替代 UI 有`Prometheus`和`ZipKin`.
+通过此设置，除了 OTel Collector 之外，我们还可以获得[耶格用户界面](https://github.com/jaegertracing/jaeger-ui)运行在<http://0.0.0.0:16686/>这将有助于可视化通话。支持的替代 UI 有`Prometheus`和`ZipKin`.
 
-客户端和服务器直接向OTel Collector发送数据；然后，OTel Collector 将数据发送到适当的后端，在此演示中为 Jaeger。
+客户端和服务器直接向OTel Collector发送数据；然后，OTel Collector 将数据发送到适当的后端，在此演示中`Jaeger`.
 
 您可以从文本日志文件中 grep 任何 url：
 
