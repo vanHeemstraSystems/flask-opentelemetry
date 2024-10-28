@@ -16,6 +16,23 @@ $ flask run
 
 Open a web browser at http://localhost: 5000
 
+In a separate terminal window run:
+
+```
+$ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+```
+
+Followed by:
+
+```
+opentelemetry-instrument \
+  --traces_exporter console \
+  --metrics_exporter console \
+  --logs_exporter console \
+  --service_name todo \
+  flask run -p 8080
+```
+
 ## 100 - Introduction
 
 See [README.md](./100/README.md)
