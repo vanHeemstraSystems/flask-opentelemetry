@@ -7,7 +7,9 @@ flask-opentelemetry
 
 **Executive Summary**
 
-Text
+After [installation](./300/100/README.md), run it with:
+
+MORE
 
 ## 100 - Introduction
 
