@@ -2,7 +2,7 @@
 
 # قارورة القياس عن بعد المفتوحة
 
-> OpenTelemetry (OTel) is an open-source, vendor-neutral observability framework designed to work with any backend system. It provides standardized APIs, libraries, and tools to collect telemetry data, such as metrics, logs, and traces. This talk is intended to provide a starting point for working with OpenTelemetry in Flask.
+> OpenTelemetry (OTel) هو إطار عمل مفتوح المصدر وقابل للمراقبة محايد للبائع مصمم للعمل مع أي نظام خلفي. وهو يوفر واجهات برمجة التطبيقات والمكتبات والأدوات القياسية لجمع بيانات القياس عن بعد، مثل المقاييس والسجلات والتتبعات. تهدف هذه المحادثة إلى توفير نقطة بداية للعمل مع OpenTelemetry في Flask.
 
 [مراجع](./REFERENCES.md)
 
@@ -15,7 +15,7 @@
 
 افتح متصفح الويب على http&#x3A;//localhost: 5000
 
-في نافذة طرفية منفصلة قم بتشغيل:
+أوقف الخادم (CTRL+C) وفي نفس المحطة قم بتشغيل:
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
@@ -27,6 +27,16 @@
       --logs_exporter console \
       --service_name todo \
       flask run -p 8080
+
+وبدلاً من ذلك، يمكنك استخدام متغيرات البيئة لتكوين الوكيل:
+
+    OTEL_SERVICE_NAME=todo \
+    OTEL_TRACES_EXPORTER=console \
+    OTEL_METRICS_EXPORTER=console \
+    OTEL_LOG_EXPORTER=console
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=0.0.0.0:8080
+    opentelemetry-instrument \
+        flask run
 
 ## 100- مقدمة
 
