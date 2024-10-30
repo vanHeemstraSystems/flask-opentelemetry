@@ -9,14 +9,14 @@ Kolben-Open-Telemetrie
 
 **Zusammenfassung**
 
-After [Installation](./300/100/README.md), führe es aus mit:
+Nach[Installation](./300/100/README.md), führe es aus mit:
 
     $ cd flask_opentelemetry/src/example
     $ flask run
 
 Öffnen Sie einen Webbrowser unter http&#x3A;//localhost:5000
 
-Sie werden ein sehen`To-Do List` app. You can add or delete tasks.
+Sie werden ein sehen`To-Do List`App. Sie können Aufgaben hinzufügen oder löschen.
 
 Stoppen Sie den Server (STRG+C) und führen Sie im selben Terminal Folgendes aus:
 
@@ -31,7 +31,7 @@ Anschließend erfolgt der Start der Anwendung über den Agenten (siehe[Referenz]
       --service_name todo \
       flask run -p 5000 | tee output.log
 
-Alternativ können Sie Umgebungsvariablen verwenden, um den Agenten zu konfigurieren:
+Alternatively, you can use environment variables to configure the agent:
 
     OTEL_SERVICE_NAME=todo \
     OTEL_TRACES_EXPORTER=console \
@@ -44,7 +44,7 @@ Alternativ können Sie Umgebungsvariablen verwenden, um den Agenten zu konfiguri
     opentelemetry-instrument \
         flask run -p 5000 | tee output.log
 
-Open a web browser at http&#x3A;//localhost:5000
+Öffnen Sie einen Webbrowser unter http&#x3A;//localhost:5000
 
 Sie werden dasselbe sehen`To-Do List`App. Sie können Aufgaben hinzufügen oder löschen.
 
@@ -194,7 +194,7 @@ Wenn der OTel Collector nicht läuft, erhalten Sie:
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-Mit diesem Setup erhalten wir zusätzlich zum OTel Collector auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)unterlaufen<http://0.0.0.0:16686/>Dies hilft bei der Visualisierung der Anrufe. Folgende alternative Benutzeroberflächen werden unterstützt:`Prometheus`Und`ZipKin`.
+Mit diesem Setup erhalten wir zusätzlich zum OTel Collector auch[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)unterlaufen<http://0.0.0.0:16686/> which will help in visualizing the calls. Alternative UIs that are supported are `Prometheus`Und`ZipKin`.
 
 Client und Server senden Daten direkt an den OTel Collector; In dieser Demo sendet der OTel Collector die Daten dann an das entsprechende Backend`Jaeger`.
 
@@ -209,7 +209,7 @@ Sie sehen eine Ausgabe wie:
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
     ...
 
-Die gesammelten Telemetriedaten sind hilfreich, um die Menge und Latenz der Anfragen im Zeitverlauf zu verstehen.
+The collected telemetry is helpful to understand the amount and latency of the requests over time. 
 
 Lassen Sie uns in der Jaeger-Benutzeroberfläche filtern (<http://0.0.0.0:16686/>) für eine der URLs, die das Tag verwenden`== url goes here ==`.
 
@@ -219,7 +219,7 @@ MEHR
 
 Sehen[README.md](./100/README.md)
 
-## 200 - Requirements
+## 200 – Anforderungen
 
 Sehen[README.md](./200/README.md)
 
