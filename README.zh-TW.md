@@ -194,7 +194,7 @@ OpenTelemetry (OTel) 收集器在連接埠 4317 上運行，因此除超時/連�
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-透過此設置，除了 OTel Collector 之外，我們還可以獲得[耶格使用者介面](https://github.com/jaegertracing/jaeger-ui)運行在<http://0.0.0.0:16686/>這將有助於可視化通話。支援的替代 UI 有`Prometheus` and `ZipKin`.
+透過此設置，除了 OTel Collector 之外，我們還可以獲得[耶格使用者介面](https://github.com/jaegertracing/jaeger-ui)運行在<http://0.0.0.0:16686/>這將有助於可視化通話。支援的替代 UI 有`Prometheus`和`ZipKin`.
 
 客戶端和伺服器直接向OTel Collector發送資料；然後，OTel Collector 將資料傳送到適當的後端，在此示範中`Jaeger`.
 
@@ -209,7 +209,7 @@ OpenTelemetry (OTel) 收集器在連接埠 4317 上運行，因此除超時/連�
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
     ...
 
-收集的遙測資料有助於了解一段時間內請求的數量和延遲。
+The collected telemetry is helpful to understand the amount and latency of the requests over time. 
 
 讓我們在 Jaeger UI 中進行過濾（<http://0.0.0.0:16686/>) 對於使用標籤的 URL 之一`== url goes here ==`.
 
@@ -225,7 +225,7 @@ OpenTelemetry (OTel) 收集器在連接埠 4317 上運行，因此除超時/連�
 
 ## 300 - 建立我們的應用程式
 
-看[README.md](./300/README.md)
+See [README.md](./300/README.md)
 
 ## 400 - 結論
 
