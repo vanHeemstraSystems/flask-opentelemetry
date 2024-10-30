@@ -211,7 +211,7 @@ Verá un resultado como:
 
 La telemetría recopilada es útil para comprender la cantidad y la latencia de las solicitudes a lo largo del tiempo.
 
-Filtremos en Jaeger UI (<http://0.0.0.0:16686/>) para una de las URL que utilizan la etiqueta`== url goes here ==`.
+Filtremos en Jaeger UI (<http://0.0.0.0:16686/>) for one of the URLs using the tag `== url goes here ==`.
 
 MÁS
 
