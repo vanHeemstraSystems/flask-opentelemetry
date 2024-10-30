@@ -189,7 +189,7 @@ Le collecteur OpenTelemetry (OTel) s'exécute sur le port 4317, donc tout autre 
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
 
-Si OTel Collector ne fonctionne pas, vous obtenez :
+Si le collecteur OTel ne fonctionne pas, vous obtenez :
 
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
