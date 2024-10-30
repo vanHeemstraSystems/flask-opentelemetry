@@ -16,7 +16,7 @@
 
 打开 Web 浏览器 http&#x3A;//localhost:5000
 
-你会看到一个`To-Do List`应用程序。您可以添加或删除任务。
+你会看到一个`To-Do List` app. You can add or delete tasks.
 
 停止服务器 (CTRL+C) 并在同一终端中运行：
 
@@ -194,7 +194,7 @@ OpenTelemetry (OTel) 收集器在端口 4317 上运行，因此除超时/连接�
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-With this setup, in addition to the OTel Collector, we also get [耶格用户界面](https://github.com/jaegertracing/jaeger-ui)运行在<http://0.0.0.0:16686/>这将有助于可视化通话。支持的替代 UI 有`Prometheus`和`ZipKin`.
+通过此设置，除了 OTel Collector 之外，我们还可以获得[耶格用户界面](https://github.com/jaegertracing/jaeger-ui)运行在<http://0.0.0.0:16686/>这将有助于可视化通话。支持的替代 UI 有`Prometheus`和`ZipKin`.
 
 客户端和服务器直接向OTel Collector发送数据；然后，OTel Collector 将数据发送到适当的后端，在此演示中`Jaeger`.
 
