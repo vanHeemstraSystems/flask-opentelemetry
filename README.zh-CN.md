@@ -16,7 +16,7 @@
 
 打开 Web 浏览器 http&#x3A;//localhost:5000
 
-你会看到一个`To-Do List` app. You can add or delete tasks.
+你会看到一个`To-Do List`应用程序。您可以添加或删除任务。
 
 停止服务器 (CTRL+C) 并在同一终端中运行：
 
