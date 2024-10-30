@@ -18,7 +18,7 @@
 
 سوف ترى أ`To-Do List`برنامج. يمكنك إضافة أو حذف المهام.
 
-أوقف الخادم (CTRL + C) وفي نفس المحطة قم بتشغيل:
+أوقف الخادم (CTRL+C) وفي نفس المحطة قم بتشغيل:
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
@@ -184,7 +184,7 @@
         }
     }
 
-يعمل مُجمع OpenTelemetry (OTel) على المنفذ 4317، لذا فإن أي رسالة خطأ أخرى غير خطأ المهلة/الاتصال (على سبيل المثال.`Transient error StatusCode.UNAVAILABLE encountered while exporting traces to localhost:4317, retrying in 2s.`)، يعني أن التطبيق قيد التشغيل:
+يعمل مُجمع OpenTelemetry (OTel) على المنفذ 4317، لذا فإن أي رسالة خطأ أخرى غير خطأ المهلة/الاتصال (على سبيل المثال.`Transient error StatusCode.UNAVAILABLE encountered while exporting traces to localhost:4317, retrying in 2s.`), means that the application is running:
 
     $ curl localhost:4317
     curl: (1) Received HTTP/0.9 when not allowed
@@ -194,7 +194,7 @@
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-مع هذا الإعداد، بالإضافة إلى OTel Collector، نحصل أيضًا على[واجهة المستخدم جايجر](https://github.com/jaegertracing/jaeger-ui)يركض تحت<http://0.0.0.0:16686/>والتي سوف تساعد في تصور المكالمات. واجهات المستخدم البديلة المدعومة هي`Prometheus`و`ZipKin`.
+مع هذا الإعداد، بالإضافة إلى OTel Collector، نحصل أيضًا على[واجهة المستخدم جايجر](https://github.com/jaegertracing/jaeger-ui)يركض تحت<http://0.0.0.0:16686/>والتي سوف تساعد في تصور المكالمات. واجهات المستخدم البديلة المدعومة هي`Prometheus` and `ZipKin`.
 
 يرسل العميل والخادم البيانات مباشرة إلى OTel Collector؛ يقوم جامع OTel بعد ذلك بإرسال البيانات إلى الواجهة الخلفية المناسبة، في هذا العرض التوضيحي`Jaeger`.
 
