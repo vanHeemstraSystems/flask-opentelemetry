@@ -209,7 +209,7 @@ OpenTelemetry (OTel) 收集器在連接埠 4317 上運行，因此除超時/連�
     "http.host": "5000-vanheemstra-flaskopente-6nzougkueau.ws-eu116.gitpod.io",
     ...
 
-The collected telemetry is helpful to understand the amount and latency of the requests over time. 
+收集的遙測資料有助於了解一段時間內請求的數量和延遲。
 
 讓我們在 Jaeger UI 中進行過濾（<http://0.0.0.0:16686/>) 對於使用標籤的 URL 之一`== url goes here ==`.
 
@@ -225,7 +225,7 @@ The collected telemetry is helpful to understand the amount and latency of the r
 
 ## 300 - 建立我們的應用程式
 
-See [README.md](./300/README.md)
+看[README.md](./300/README.md)
 
 ## 400 - 結論
 
