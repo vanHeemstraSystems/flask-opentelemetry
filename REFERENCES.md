@@ -10,3 +10,4 @@
 - [Getting Started with ElasticSearch using Python Flask — Part 2](https://girishsaraf03.medium.com/getting-started-with-elasticsearch-using-python-flask-part-2-1052bb78bfc3)
 - [PoC for setting up an ElasticSearch Cluster, to serve APIs built in Flask](https://github.com/girishsaraf/elastic_py)
 - [Prometheus Viewer - Chrome Extension](https://chromewebstore.google.com/detail/prometheus-viewer/cbemcojgcihplgfjjdoplpfjmamiikcn)
+- [Mastering Prometheus Exporters: Techniques and Best Practices](https://www.checklyhq.com/blog/mastering-prometheus-exporters-game-changing-techniques/)
