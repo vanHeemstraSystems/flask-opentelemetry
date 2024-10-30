@@ -9,14 +9,14 @@ Kolben-Open-Telemetrie
 
 **Zusammenfassung**
 
-Nach[Installation](./300/100/README.md), führe es aus mit:
+After [Installation](./300/100/README.md), führe es aus mit:
 
     $ cd flask_opentelemetry/src/example
     $ flask run
 
 Öffnen Sie einen Webbrowser unter http&#x3A;//localhost:5000
 
-Sie werden ein sehen`To-Do List`App. Sie können Aufgaben hinzufügen oder löschen.
+Sie werden ein sehen`To-Do List` app. You can add or delete tasks.
 
 Stoppen Sie den Server (STRG+C) und führen Sie im selben Terminal Folgendes aus:
 
@@ -44,7 +44,7 @@ Alternativ können Sie Umgebungsvariablen verwenden, um den Agenten zu konfiguri
     opentelemetry-instrument \
         flask run -p 5000 | tee output.log
 
-Öffnen Sie einen Webbrowser unter http&#x3A;//localhost:5000
+Open a web browser at http&#x3A;//localhost:5000
 
 Sie werden dasselbe sehen`To-Do List`App. Sie können Aufgaben hinzufügen oder löschen.
 
@@ -219,7 +219,7 @@ MEHR
 
 Sehen[README.md](./100/README.md)
 
-## 200 – Anforderungen
+## 200 - Requirements
 
 Sehen[README.md](./200/README.md)
 
