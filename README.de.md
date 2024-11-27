@@ -6,6 +6,8 @@ Kolben-Open-Telemetrie
 
 -   [Glossar](./GLOSSARY.md)
 -   [Referenzen](./REFERENCES.md)
+-   [Dokumentation](./DOCUMENTATION.md)
+-   [Telemetrie](./TELEMETRY.md)
 
 **Zusammenfassung**
 
@@ -14,7 +16,7 @@ Nach[Installation](./300/100/README.md), führe es aus mit:
     $ cd flask_opentelemetry/src/example
     $ flask run
 
-Öffnen Sie einen Webbrowser unter http&#x3A;//localhost:5000
+Open a web browser at http&#x3A;//localhost:5000
 
 Sie werden ein sehen`To-Do List`App. Sie können Aufgaben hinzufügen oder löschen.
 
@@ -219,7 +221,7 @@ MEHR
 
 Sehen[README.md](./100/README.md)
 
-## 200 - Requirements
+## 200 – Anforderungen
 
 Sehen[README.md](./200/README.md)
 
