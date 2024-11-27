@@ -24,7 +24,7 @@
 
     $ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 
-接下来通过代理启动应用程序（请参阅[reference](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)）并保留文本日志文件：
+接下来通过代理启动应用程序（请参阅[参考](https://opentelemetry.io/docs/instrumentation/python/automatic/#configuring-the-agent)）并保留文本日志文件：
 
     opentelemetry-instrument \
       --traces_exporter console \
@@ -46,7 +46,7 @@
     opentelemetry-instrument \
         flask run -p 5000 | tee output.log
 
-Open a web browser at http&#x3A;//localhost:5000
+打开 Web 浏览器 http&#x3A;//localhost:5000
 
 你会看到同样的`To-Do List`应用程序。您可以添加或删除任务。
 
@@ -227,7 +227,7 @@ OpenTelemetry (OTel) 收集器在端口 4317 上运行，因此除超时/连接�
 
 ## 300 - 构建我们的应用程序
 
-See [README.md](./300/README.md)
+看[README.md](./300/README.md)
 
 ## 400 - 结论
 
