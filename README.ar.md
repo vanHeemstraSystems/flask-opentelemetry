@@ -6,6 +6,8 @@
 
 -   [مسرد](./GLOSSARY.md)
 -   [مراجع](./REFERENCES.md)
+-   [التوثيق](./DOCUMENTATION.md)
+-   [القياس عن بعد](./TELEMETRY.md)
 
 **ملخص تنفيذي**
 
