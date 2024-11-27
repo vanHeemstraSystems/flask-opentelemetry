@@ -6,6 +6,8 @@
 
 -   [詞彙表](./GLOSSARY.md)
 -   [參考](./REFERENCES.md)
+-   [文件](./DOCUMENTATION.md)
+-   [遙測](./TELEMETRY.md)
 
 **執行摘要**
 
@@ -44,7 +46,7 @@
     opentelemetry-instrument \
         flask run -p 5000 | tee output.log
 
-Open a web browser at http&#x3A;//localhost:5000
+開啟 Web 瀏覽器 http&#x3A;//localhost:5000
 
 你會看到同樣的`To-Do List`應用程式.您可以新增或刪除任務。
 
@@ -194,7 +196,7 @@ OpenTelemetry (OTel) 收集器在連接埠 4317 上運行，因此除超時/連�
     $ curl localhost:4317
     curl: (7) Failed to connect to localhost port 4317 after 0 ms: Connection refused
 
-透過此設置，除了 OTel Collector 之外，我們還可以獲得[耶格使用者介面](https://github.com/jaegertracing/jaeger-ui)運行在<http://0.0.0.0:16686/>這將有助於可視化通話。支援的替代 UI 有`Prometheus`和`ZipKin`.
+透過此設置，除了 OTel Collector 之外，我們還可以獲得[Jaeger UI](https://github.com/jaegertracing/jaeger-ui)運行在<http://0.0.0.0:16686/>這將有助於可視化通話。支援的替代 UI 有`Prometheus`和`ZipKin`.
 
 客戶端和伺服器直接向OTel Collector發送資料；然後，OTel Collector 將資料傳送到適當的後端，在此示範中`Jaeger`.
 
