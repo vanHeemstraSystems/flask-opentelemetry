@@ -6,6 +6,8 @@ télémétrie à ouverture de flacon
 
 -   [Glossaire](./GLOSSARY.md)
 -   [Références](./REFERENCES.md)
+-   [Documentation](./DOCUMENTATION.md)
+-   [Télémétrie](./TELEMETRY.md)
 
 **Résumé exécutif**
 
@@ -16,7 +18,7 @@ Après[installation](./300/100/README.md), exécutez-le avec :
 
 Ouvrez un navigateur Web sur http&#x3A;//localhost:5000
 
-Vous verrez un`To-Do List`application. Vous pouvez ajouter ou supprimer des tâches.
+You will see a `To-Do List`application. Vous pouvez ajouter ou supprimer des tâches.
 
 Arrêtez le serveur (CTRL+C) et dans le même terminal exécutez :
 
@@ -46,7 +48,7 @@ Vous pouvez également utiliser des variables d'environnement pour configurer l'
 
 Ouvrez un navigateur Web sur http&#x3A;//localhost:5000
 
-Tu verras la même chose`To-Do List`application. Vous pouvez ajouter ou supprimer des tâches.
+Vous verrez la même chose`To-Do List` app. You can add or delete tasks.
 
 Dans le terminal, vous verrez le résultat suivant :
 
@@ -223,10 +225,10 @@ Voir[README.md](./100/README.md)
 
 Voir[README.md](./200/README.md)
 
-## 300 - Créer notre application
+## 300 - Construire notre application
 
 Voir[README.md](./300/README.md)
 
 ## 400 - Conclusion
 
-Voir[README.md](./400/README.md)
+See [README.md](./400/README.md)
