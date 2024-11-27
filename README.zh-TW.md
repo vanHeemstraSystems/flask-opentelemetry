@@ -44,7 +44,7 @@
     opentelemetry-instrument \
         flask run -p 5000 | tee output.log
 
-開啟 Web 瀏覽器 http&#x3A;//localhost:5000
+Open a web browser at http&#x3A;//localhost:5000
 
 你會看到同樣的`To-Do List`應用程式.您可以新增或刪除任務。
 
